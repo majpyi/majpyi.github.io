@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Hello</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  
+  <meta name="description" content="Nice to meet you">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hello">
+<meta property="og:url" content="http://blog.majpyi.club/index.html">
+<meta property="og:site_name" content="Hello">
+<meta property="og:description" content="Nice to meet you">
+<meta property="og:locale" content="zh-CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hello">
+<meta name="twitter:description" content="Nice to meet you">
+  
+    <link rel="alternate" href="/atom.xml" title="Hello" type="application/atom+xml">
+  
+
+  
+
+  <link rel="icon" href="/css/images/mylogo.jpg">
+  <link rel="apple-touch-icon" href="/css/images/mylogo.jpg">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script src="/js/jquery-3.1.1.min.js"></script>
+  <script src="/js/bootstrap.js"></script>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css" >
+
+  
+    <link rel="stylesheet" href="/css/home.css" >
+  
+
+  
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/0.4.0/trianglify.min.js"></script>
+  
+
+  
+
+  
+  
+  
+
+</head>
+
+
+
+  <body>
+
+
+  
+    <header id="header">
+
+	<!-- 背景图模式 -->
+	
+
+    
+      <div id="intrologo" class="intro-logo">
+    
+ 
+
+
+    <canvas width="100%" height="100%"></canvas>
+    <script>
+      var c = document.getElementsByTagName('canvas')[0],
+          x = c.getContext('2d'),
+          w = window.innerWidth,
+          h = window.innerHeight,
+          pr = window.devicePixelRatio || 1,
+          f = 90,
+          q,
+          m = Math,
+          r = 0,
+          u = m.PI*2,
+          v = m.cos,
+          z = m.random
+      c.width = w*pr
+      c.height = h*pr
+      x.scale(pr, pr)
+      x.globalAlpha = 0.6
+
+      <!-- 折线Polyline背景 -->
+      
+		 function redraw(){
+		 	var pattern = Trianglify({
+				width: window.innerWidth,
+				height: window.innerHeight
+			});
+            pattern.canvas(c)
+        }
+        document.getElementById("intrologo").onclick = redraw
+        document.getElementById("intrologo").ontouchstart = redraw
+		redraw()
+      
+    </script>
+    
+
+    
+      <div id="homelogo" class="homelogo" style="background: rgba(255,255,255,1);"> 
+    
+
+        
+          <div class="homelogoback"  style="border: 1px solid #404040;" >
+            <h1><a href="#content" id="logo">Hello</a></h1>
+            <h3>Nice to meet you</h3>
+            <h5>MY</h5>
+            <!-- <p><a href="https://github.com/iTimeTraveler" target="_blank">Github</a></p> -->
+          </div>
+        
+    
+    </div>
+  </div>
+
+  <!-- 自适应主页背景大图 -->
+  
+
+ <!-- home_logo_image居中 -->
+ 
+    <script>
+        var homelogodiv = document.getElementById("homelogo");
+        if (document.all.homelogo.offsetWidth > document.body.clientWidth) {
+          homelogodiv.style.width = document.body.clientWidth + "px";
+          homelogodiv.style.marginLeft = document.body.clientWidth * -0.5 + "px";
+        } else {
+          homelogodiv.style.width = homelogodiv.clientWidth  + "px";
+          homelogodiv.style.marginLeft = (homelogodiv.clientWidth)  * -0.5 + "px";
+        }
+    </script>
+  
+
+  <div class="intro-navigate">
+      <p class="navigater-list">
+        
+          <a id="beautifont" class="main-nav-link" href="/">首页</a>
+        
+          <a id="beautifont" class="main-nav-link" href="/archives">归档</a>
+        
+          <a id="beautifont" class="main-nav-link" href="/categories">分类</a>
+        
+          <a id="beautifont" class="main-nav-link" href="/tags">标签</a>
+        
+          <a id="beautifont" class="main-nav-link" href="/about">关于</a>
+        
+      </p>
+  </div>
+
+</header>
+  
+  <div id="container">
+    <div id="wrap">
+      
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;">
+  
+    <article id="post-01背包问题"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+    <div class="article-meta">
+      
+	<a href="/2018/05/05/01背包问题/" class="article-date">
+	  <time datetime="2018-05-05T02:44:01.000Z" itemprop="datePublished">2018-05-05</time>
+	</a>
+
+      
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="http://www.importnew.com/13072.html" target="_blank" rel="external">1</a></p>
+<blockquote>
+<p>  典型例题 <a href="http://acm.hdu.edu.cn/showproblem.php?pid=2602" target="_blank" rel="external">hdu2602</a></p>
+<p>  计算的是当前最优解</p>
+</blockquote>
+<h3 id="思想"><a href="#思想" class="headerlink" title="思想:"></a>思想:</h3><p><img src="/images/01背包问题.assets/image-20180505104638066.png" alt="/images/image-20180505104638066"></p>
+<p>其中核心思想就是上面这张图,从上到下从左往右进行一次计算</p>
+<p>以前一行的计算结果为最优值子结果进行状态传递</p>
+<h3 id="过程"><a href="#过程" class="headerlink" title="过程:"></a>过程:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">V[item][weight]=Math.max (val[item-1]+V[item-1][weight-wt[item-1]], V[item-1][weight]);</div></pre></td></tr></table></figure>
+<ul>
+<li>核心代码: 由前一个状态的转移到现在状态的最优解的过程,如果有更优的结果就进行改变.</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> java.util.Scanner;</div><div class="line"><span class="comment">/**</span></div><div class="line"><span class="comment"> * <span class="doctag">@program</span>: hdu</span></div><div class="line"><span class="comment"> * <span class="doctag">@description</span>: http://acm.hdu.edu.cn/showproblem.php?pid=2602</span></div><div class="line"><span class="comment"> * <span class="doctag">@author</span>: Majpyi</span></div><div class="line"><span class="comment"> * <span class="doctag">@create</span>: 2018-05-04 15:50</span></div><div class="line"><span class="comment"> **/</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> 简单01背包问题2602 </span>&#123;</div><div class="line">     <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">re</span> <span class="params">(<span class="keyword">int</span> capacity,<span class="keyword">int</span>[] val,<span class="keyword">int</span>[] weight)</span></span>&#123;</div><div class="line">         <span class="keyword">int</span> nums =weight.length;</div><div class="line">         </div><div class="line"><span class="comment">//        因为需要进行状态转移,所以必须要有前一个状态,所以需要一个0的初试状态,所以数组需要扩大一维   </span></div><div class="line"><span class="comment">//        下面许多地方的错误都是因为对维度的控制错误,忘记了初试时的状态需要进行记录</span></div><div class="line">         </div><div class="line"><span class="comment">//         int[][] v =new int[nums][capacity];</span></div><div class="line">         <span class="keyword">int</span>[][] v =<span class="keyword">new</span> <span class="keyword">int</span>[nums+<span class="number">1</span>][capacity+<span class="number">1</span>];</div><div class="line"></div><div class="line"><span class="comment">//         for(int i=0;i&lt;capacity;i++)&#123;</span></div><div class="line">         <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=capacity;i++)&#123;</div><div class="line">             v[<span class="number">0</span>][i]=<span class="number">0</span>;</div><div class="line">         &#125;</div><div class="line"></div><div class="line">         </div><div class="line"><span class="comment">//         核心代码段        </span></div><div class="line"><span class="comment">//        for(int i=1;i&lt;nums;i++)&#123;</span></div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=nums;i++)&#123;        <span class="comment">//    代表上图中有多少行</span></div><div class="line"><span class="comment">//            for(int j=0;j&lt;capacity;j++)&#123;</span></div><div class="line"><span class="comment">//            for(int j=0;j&lt;=capacity;j++)&#123;</span></div><div class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j=capacity;j&gt;=<span class="number">0</span>;j--)&#123;<span class="comment">//    代表上图中有多少列</span></div><div class="line">                </div><div class="line">                <span class="keyword">if</span>(weight[i-<span class="number">1</span>]&lt;=j) &#123;     <span class="comment">//    需要判断否则就会数组下标溢出</span></div><div class="line">                    <span class="keyword">if</span> (v[i - <span class="number">1</span>][j - weight[i - <span class="number">1</span>]] + val[i-<span class="number">1</span>] &gt; v[i - <span class="number">1</span>][j])</div><div class="line">                        v[i][j] = v[i - <span class="number">1</span>][j - weight[i - <span class="number">1</span>]] + val[i-<span class="number">1</span>] ;</div><div class="line"><span class="comment">//  一开始下面的 else 没有写导致错误,如果没有,进入 weight[i-1]&lt;=j 状态后,if 之外的状态没有进行计算</span></div><div class="line">                    <span class="keyword">else</span>  v[i][j]=v[i-<span class="number">1</span>][j];                  </div><div class="line">                &#125;</div><div class="line">                <span class="keyword">else</span>  v[i][j]=v[i-<span class="number">1</span>][j];                </div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">         </div><div class="line"><span class="comment">//       单纯输出结果        </span></div><div class="line"><span class="comment">//        for(int i=0;i&lt;=nums;i++)</span></div><div class="line"><span class="comment">//        &#123;</span></div><div class="line"><span class="comment">//            for(int j=0;j&lt;=capacity;j++)</span></div><div class="line"><span class="comment">//                System.out.print(v[i][j]+"  ");</span></div><div class="line"><span class="comment">//            System.out.println();</span></div><div class="line"><span class="comment">//        &#125;</span></div><div class="line"></div><div class="line"><span class="comment">//        return v[nums-1][capacity-1];</span></div><div class="line">         System.out.println(v[nums][capacity]);</div><div class="line">     &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">        Scanner a =<span class="keyword">new</span> Scanner(System.in);</div><div class="line">        <span class="keyword">int</span> nums =a.nextInt();</div><div class="line">        <span class="keyword">while</span>(nums--!=<span class="number">0</span>)&#123;</div><div class="line">            <span class="keyword">int</span> iterms = a.nextInt();</div><div class="line">            <span class="keyword">int</span> capacity = a.nextInt();</div><div class="line">            <span class="keyword">int</span>[] val=<span class="keyword">new</span> <span class="keyword">int</span>[iterms];</div><div class="line">            <span class="keyword">int</span>[] weight =<span class="keyword">new</span> <span class="keyword">int</span>[iterms];</div><div class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;iterms;i++)&#123;</div><div class="line">                val[i]=a.nextInt();</div><div class="line">            &#125;</div><div class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;iterms;i++)&#123;</div><div class="line">                weight[i]=a.nextInt();</div><div class="line">            &#125;</div><div class="line">            re(capacity,val,weight);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="注意"><a href="#注意" class="headerlink" title="注意:"></a>注意:</h3><p>易错的地方: </p>
+<ul>
+<li><p>因为需要进行状态转移,所以必须要有前一个状态,所以需要一个0的初试状态,所以数组需要扩大一维   </p>
+</li>
+<li><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span>(weight[i-<span class="number">1</span>]&lt;=j) &#123;     <span class="comment">//    需要判断否则就会数组下标溢出</span></div><div class="line">    <span class="keyword">if</span> (v[i - <span class="number">1</span>][j - weight[i - <span class="number">1</span>]] + val[i-<span class="number">1</span>] &gt; v[i - <span class="number">1</span>][j])</div><div class="line">        v[i][j] = v[i - <span class="number">1</span>][j - weight[i - <span class="number">1</span>]] + val[i-<span class="number">1</span>] ;</div></pre></td></tr></table></figure>
+<p>//  一开始下面的 else 没有写导致错误,如果没有,进入 weight[i-1]&lt;=j 状态后,if 之外的状态没有进行计算</p>
+<pre><code>else  v[i][j]=v[i-1][j];  
+</code></pre><p>```</p>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+  
+    <article id="post-b"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2018/02/10/b/">H</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2018/02/10/b/" class="article-date">
+	  <time datetime="2018-02-10T08:44:05.000Z" itemprop="datePublished">2018-02-10</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/1/">1</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="/Users/Quantum/Desktop/15182518203688.jpg" alt=""></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/me/">me</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+  
+    <article id="post-搭建ghost时遇到的坑"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/08/05/搭建ghost时遇到的坑/">搭建ghost时遇到的坑</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/08/05/搭建ghost时遇到的坑/" class="article-date">
+	  <time datetime="2017-08-05T14:50:18.000Z" itemprop="datePublished">2017-08-05</time>
+	</a>
+
+      
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1-https协议照成的重定向循环"><a href="#1-https协议照成的重定向循环" class="headerlink" title="1.https协议照成的重定向循环"></a>1.https协议照成的重定向循环</h3><p>搭建ghost的时候遇到一个问题就是因为加了锁的https协议照成的重定向循环<br>需要在<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">location / &#123;</div><div class="line">            proxy_set_header  X-Real-IP  $remote_addr;</div><div class="line">            proxy_set_header  X-Forwarded-For  $remote_addr;</div><div class="line">            proxy_pass  http://127.0.0.1:2368;</div><div class="line">            proxy_set_header X-Forwarded-Proto $scheme; //增加这段，就是访问的协议，也可以直接写&quot;https&quot;</div><div class="line">        &#125;</div></pre></td></tr></table></figure></p>
+<p>这是一个http的头部，来说明是用什么协议进行通信</p>
+<hr>
+<h3 id="2-没有config-example-js的文件"><a href="#2-没有config-example-js的文件" class="headerlink" title="2. 没有config.example.js的文件"></a>2. 没有config.example.js的文件</h3>
+        <!-- 1.https协议照成的重定向循环搭建ghost的时候遇到一个问题就是因为加了锁的https协议照成的重定向循环需要在123456location / &#123;            proxy_set_header  X-Real-IP  $remote_addr;            proxy_set_header  X-Forwarded-For  $remote_addr; ......  -->
+        <p class="article-more-link">
+          <a href="/2017/08/05/搭建ghost时遇到的坑/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+  
+    <article id="post-Hello-World"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/08/04/Hello-World/">你好</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/08/04/Hello-World/" class="article-date">
+	  <time datetime="2017-08-04T07:38:33.000Z" itemprop="datePublished">2017-08-04</time>
+	</a>
+
+      
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>你好啊！<br>我来了。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+  
+
+
+</section>
+        
+      </div>
+      
+        <div align="center" style="margin-top: 30px;"><hr class="hr" style="margin:0px; height:3px;"></div>
+      
+      <footer id="footer">
+  
+
+  <div class="container">
+      	<div class="row">
+	      <p> Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/iTimeTraveler/hexo-theme-hiker" target="_blank">Hexo-theme-hiker</a> </p>
+	      <p id="copyRightEn">Copyright &copy; 2013 - 2019 Hello All Rights Reserved.</p>
+	      
+	      
+  		   	<p id="copyRightCn">MY 保留所有权利</p>
+  		   
+		</div>
+
+		
+  </div>
+</footer>
+
+
+<!-- min height -->
+
+<script>
+    var wrapdiv = document.getElementById("wrap");
+    var contentdiv = document.getElementById("content");
+    var allheader = document.getElementById("allheader");
+
+    wrapdiv.style.minHeight = document.body.offsetHeight + "px";
+    if (allheader != null) {
+      contentdiv.style.minHeight = document.body.offsetHeight - allheader.offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    } else {
+      contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    }
+</script>
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/categories" class="mobile-nav-link">Categories</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav> -->
+    
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/scripts.js"></script>
+
+
+  <script src="/js/home.js"></script>
+
+
+
+
+
+
+
+
+
+
+	<div style="display: none;">
+    <script src="https://s95.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+  </div>
+
+
+
+
+
+
+
+
+  </div>
+
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" id="myModalLabel">设置</h2>
+      </div>
+      <hr style="margin-top:0px; margin-bottom:0px; width:80%; border-top: 3px solid #000;">
+      <hr style="margin-top:2px; margin-bottom:0px; width:80%; border-top: 1px solid #000;">
+
+
+      <div class="modal-body">
+          <div style="margin:6px;">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" onclick="javascript:setFontSize();" aria-expanded="true" aria-controls="collapseOne">
+              正文字号大小
+            </a>
+          </div>
+          <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+          <div class="panel-body">
+            您已调整页面字体大小
+          </div>
+        </div>
+      
+
+
+          <div style="margin:6px;">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" onclick="javascript:setBackground();" aria-expanded="true" aria-controls="collapseTwo">
+              夜间护眼模式
+            </a>
+        </div>
+          <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+          <div class="panel-body">
+            夜间模式已经开启，再次单击按钮即可关闭 
+          </div>
+        </div>
+
+        <div>
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;关 于&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        </div>
+         <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+          <div class="panel-body">
+            Hello
+          </div>
+          <div class="panel-body">
+            Copyright © 2019 MY All Rights Reserved.
+          </div>
+        </div>
+      </div>
+
+
+      <hr style="margin-top:0px; margin-bottom:0px; width:80%; border-top: 1px solid #000;">
+      <hr style="margin-top:2px; margin-bottom:0px; width:80%; border-top: 3px solid #000;">
+      <div class="modal-footer">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+      </div>
+    </div>
+  </div>
+</div>
+  
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
+  
+</body>
+</html>

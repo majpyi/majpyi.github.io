@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>搭建ghost时遇到的坑 | Hello</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  
+  <meta name="description" content="1.https协议照成的重定向循环搭建ghost的时候遇到一个问题就是因为加了锁的https协议照成的重定向循环需要在123456location / &amp;#123;            proxy_set_header  X-Real-IP  $remote_addr;            proxy_set_header  X-Forwarded-For  $remote_addr;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="搭建ghost时遇到的坑">
+<meta property="og:url" content="http://blog.majpyi.club/2017/08/05/搭建ghost时遇到的坑/index.html">
+<meta property="og:site_name" content="Hello">
+<meta property="og:description" content="1.https协议照成的重定向循环搭建ghost的时候遇到一个问题就是因为加了锁的https协议照成的重定向循环需要在123456location / &amp;#123;            proxy_set_header  X-Real-IP  $remote_addr;            proxy_set_header  X-Forwarded-For  $remote_addr;">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-08-05T14:53:51.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="搭建ghost时遇到的坑">
+<meta name="twitter:description" content="1.https协议照成的重定向循环搭建ghost的时候遇到一个问题就是因为加了锁的https协议照成的重定向循环需要在123456location / &amp;#123;            proxy_set_header  X-Real-IP  $remote_addr;            proxy_set_header  X-Forwarded-For  $remote_addr;">
+  
+    <link rel="alternate" href="/atom.xml" title="Hello" type="application/atom+xml">
+  
+
+  
+
+  <link rel="icon" href="/css/images/mylogo.jpg">
+  <link rel="apple-touch-icon" href="/css/images/mylogo.jpg">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script src="/js/jquery-3.1.1.min.js"></script>
+  <script src="/js/bootstrap.js"></script>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css" >
+
+  
+    <link rel="stylesheet" href="/css/dialog.css">
+  
+
+  
+
+  
+    <link rel="stylesheet" href="/css/header-post.css" >
+  
+
+  
+  
+  
+
+</head>
+
+
+
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
+
+
+  
+  <div id="container">
+    <div id="wrap">
+      
+        <header>
+
+    <div id="allheader" class="navbar navbar-default navbar-static-top" role="navigation">
+        <div class="navbar-inner">
+          
+          <div class="container"> 
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+
+            
+              <a class="brand" style="border-width: 0;">
+                <p>Hello</p>
+              </a>
+            
+            
+            <div class="navbar-collapse collapse">
+              <ul class="hnav navbar-nav">
+                
+                  <li> <a class="main-nav-link" href="/">首页</a> </li>
+                
+                  <li> <a class="main-nav-link" href="/archives">归档</a> </li>
+                
+                  <li> <a class="main-nav-link" href="/categories">分类</a> </li>
+                
+                  <li> <a class="main-nav-link" href="/tags">标签</a> </li>
+                
+                  <li> <a class="main-nav-link" href="/about">关于</a> </li>
+                
+                  <li><div id="search-form-wrap">
+
+    <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="index.search"><button type="submit" class="search-form-submit"> </button><input type="hidden" name="sitesearch" value="http://blog.majpyi.club"></form>
+
+</div></li>
+            </div>
+          </div>
+                
+      </div>
+    </div>
+
+</header>
+
+
+
+      
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-搭建ghost时遇到的坑" style="width: 75%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" class="article-title" itemprop="name">
+      搭建ghost时遇到的坑
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/08/05/搭建ghost时遇到的坑/" class="article-date">
+	  <time datetime="2017-08-05T14:50:18.000Z" itemprop="datePublished">2017-08-05</time>
+	</a>
+
+      
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1-https协议照成的重定向循环"><a href="#1-https协议照成的重定向循环" class="headerlink" title="1.https协议照成的重定向循环"></a>1.https协议照成的重定向循环</h3><p>搭建ghost的时候遇到一个问题就是因为加了锁的https协议照成的重定向循环<br>需要在<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">location / &#123;</div><div class="line">            proxy_set_header  X-Real-IP  $remote_addr;</div><div class="line">            proxy_set_header  X-Forwarded-For  $remote_addr;</div><div class="line">            proxy_pass  http://127.0.0.1:2368;</div><div class="line">            proxy_set_header X-Forwarded-Proto $scheme; //增加这段，就是访问的协议，也可以直接写&quot;https&quot;</div><div class="line">        &#125;</div></pre></td></tr></table></figure></p>
+<p>这是一个http的头部，来说明是用什么协议进行通信</p>
+<hr>
+<h3 id="2-没有config-example-js的文件"><a href="#2-没有config-example-js的文件" class="headerlink" title="2. 没有config.example.js的文件"></a>2. 没有config.example.js的文件</h3><a id="more"></a>
+<p>在下载ghost是从网上查了下发现大部分教程都是下载ghost文件解压后有一个config.example.js的文件，在这里设置vps的url连接，从官网下载最新的zip结果发现没有这个文件，一开始以为自己下错了，后来才发现是软件升级了，大版本更新，由0.7升级到了1.0安装的方式变了。后来从ghostchina下载的中文版的0.7版本装的。</p>
+<hr>
+<h3 id="3-需要安装什么"><a href="#3-需要安装什么" class="headerlink" title="3.需要安装什么"></a>3.需要安装什么</h3><p>安装中发现不需要安装php与mysql，只需要nginx与nodejs及课运行。</p>
+<hr>
+<h3 id="4-nodejs的版本不对"><a href="#4-nodejs的版本不对" class="headerlink" title="4.nodejs的版本不对"></a>4.nodejs的版本不对</h3><p>在安装中进行nodejs安装，发现版本不对，需要Node 0.10.x 版本，同时支持 Node 0.12.x 和 4.2.x 版本，那怎么办？发现可以用nvm或者n进行nodejs的版本管理，经过两个比较，发现nvm是全局的改变nodejs版本而n有一定限制，nvm比较好。nvm+版本号，yum remove进行卸载</p>
+<hr>
+<h3 id="5-使用npm进行相应nodejs的安装"><a href="#5-使用npm进行相应nodejs的安装" class="headerlink" title="5.使用npm进行相应nodejs的安装"></a>5.使用npm进行相应nodejs的安装</h3><p>npm install –production，直接进行安装</p>
+<hr>
+<h3 id="6-程序无法再关闭连接后持续后台运行"><a href="#6-程序无法再关闭连接后持续后台运行" class="headerlink" title="6.程序无法再关闭连接后持续后台运行"></a>6.程序无法再关闭连接后持续后台运行</h3><p>我们需要进行守护程序来让ghost在后台持续运行，我们使用进程守护程序“Forever”，通过npm install forever -g进行安装</p>
+<hr>
+<h3 id="7-使用NODE-ENV变量与forever命令"><a href="#7-使用NODE-ENV变量与forever命令" class="headerlink" title="7.使用NODE_ENV变量与forever命令"></a>7.使用NODE_ENV变量与forever命令</h3><p>NODE_ENV=production forever start index.js，来让ghost启动，前面的NODE_ENV变量表示以什么环境进行运行，这个是生产模式，还有开发模式，可以选择 forever stop index.js 关闭  NODE_ENV=production forever restart index.js 重启 forever list 查看运行状态</p>
+<hr>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/02/10/b/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <div class="article-nav-title">
+        
+          H
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/08/04/Hello-World/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">你好</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+<!-- Table of Contents -->
+
+  <aside id="toc-sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    
+        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-https协议照成的重定向循环"><span class="nav-number">1.</span> <span class="nav-text">1.https协议照成的重定向循环</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-没有config-example-js的文件"><span class="nav-number">2.</span> <span class="nav-text">2. 没有config.example.js的文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-需要安装什么"><span class="nav-number">3.</span> <span class="nav-text">3.需要安装什么</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-nodejs的版本不对"><span class="nav-number">4.</span> <span class="nav-text">4.nodejs的版本不对</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-使用npm进行相应nodejs的安装"><span class="nav-number">5.</span> <span class="nav-text">5.使用npm进行相应nodejs的安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-程序无法再关闭连接后持续后台运行"><span class="nav-number">6.</span> <span class="nav-text">6.程序无法再关闭连接后持续后台运行</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-使用NODE-ENV变量与forever命令"><span class="nav-number">7.</span> <span class="nav-text">7.使用NODE_ENV变量与forever命令</span></a></li></ol>
+    
+    </div>
+  </aside>
+</section>
+        
+      </div>
+      
+      <footer id="footer">
+  
+
+  <div class="container">
+      	<div class="row">
+	      <p> Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/iTimeTraveler/hexo-theme-hiker" target="_blank">Hexo-theme-hiker</a> </p>
+	      <p id="copyRightEn">Copyright &copy; 2013 - 2019 Hello All Rights Reserved.</p>
+	      
+	      
+  		   	<p id="copyRightCn">MY 保留所有权利</p>
+  		   
+		</div>
+
+		
+  </div>
+</footer>
+
+
+<!-- min height -->
+
+<script>
+    var wrapdiv = document.getElementById("wrap");
+    var contentdiv = document.getElementById("content");
+    var allheader = document.getElementById("allheader");
+
+    wrapdiv.style.minHeight = document.body.offsetHeight + "px";
+    if (allheader != null) {
+      contentdiv.style.minHeight = document.body.offsetHeight - allheader.offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    } else {
+      contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    }
+</script>
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/categories" class="mobile-nav-link">Categories</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav> -->
+    
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/scripts.js"></script>
+
+
+
+
+  <script src="/js/dialog.js"></script>
+
+
+
+
+
+
+
+
+	<div style="display: none;">
+    <script src="https://s95.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+  </div>
+
+
+
+
+
+
+
+
+  </div>
+
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" id="myModalLabel">设置</h2>
+      </div>
+      <hr style="margin-top:0px; margin-bottom:0px; width:80%; border-top: 3px solid #000;">
+      <hr style="margin-top:2px; margin-bottom:0px; width:80%; border-top: 1px solid #000;">
+
+
+      <div class="modal-body">
+          <div style="margin:6px;">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" onclick="javascript:setFontSize();" aria-expanded="true" aria-controls="collapseOne">
+              正文字号大小
+            </a>
+          </div>
+          <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+          <div class="panel-body">
+            您已调整页面字体大小
+          </div>
+        </div>
+      
+
+
+          <div style="margin:6px;">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" onclick="javascript:setBackground();" aria-expanded="true" aria-controls="collapseTwo">
+              夜间护眼模式
+            </a>
+        </div>
+          <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+          <div class="panel-body">
+            夜间模式已经开启，再次单击按钮即可关闭 
+          </div>
+        </div>
+
+        <div>
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;关 于&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        </div>
+         <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+          <div class="panel-body">
+            Hello
+          </div>
+          <div class="panel-body">
+            Copyright © 2019 MY All Rights Reserved.
+          </div>
+        </div>
+      </div>
+
+
+      <hr style="margin-top:0px; margin-bottom:0px; width:80%; border-top: 1px solid #000;">
+      <hr style="margin-top:2px; margin-bottom:0px; width:80%; border-top: 3px solid #000;">
+      <div class="modal-footer">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+      </div>
+    </div>
+  </div>
+</div>
+  
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
+  
+    <a id="menu-switch"><i class="fa fa-bars fa-lg"></i></a>
+  
+</body>
+</html>
