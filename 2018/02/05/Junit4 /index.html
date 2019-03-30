@@ -94,23 +94,26 @@
 
 
 
-<meta name="description" content="tomcatCaveatsTo have launchd start tomcat now and restart at login:  brew services start tomcatOr, if you don’t want/need a background service you can just run:  catalina run 注意事项要立即启动tomcat并在登录时重新启动：">
+<meta name="description" content="Junit4link  完善代码 测试失败两种情况 运行流程 常用注解 测试套件使用 参数化设置 spring 与 hibernate 整合测试">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello">
-<meta property="og:url" content="http://blog.majpyi.club/2018/05/24/tomcat/index.html">
+<meta property="og:title" content="Junit4">
+<meta property="og:url" content="http://blog.majpyi.club/2018/02/05/Junit4 /index.html">
 <meta property="og:site_name" content="Hello">
-<meta property="og:description" content="tomcatCaveatsTo have launchd start tomcat now and restart at login:  brew services start tomcatOr, if you don’t want/need a background service you can just run:  catalina run 注意事项要立即启动tomcat并在登录时重新启动：">
+<meta property="og:description" content="Junit4link  完善代码 测试失败两种情况 运行流程 常用注解 测试套件使用 参数化设置 spring 与 hibernate 整合测试">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://blog.majpyi.club/images/media/15216321899363/15216421688142.gif">
-<meta property="og:image" content="http://blog.majpyi.club/images/media/15216321899363/15240413777567.jpg">
-<meta property="og:image" content="http://blog.majpyi.club/images/media/15216321899363/15240512420182.jpg">
-<meta property="og:image" content="http://blog.majpyi.club/images/media/15216321899363/15240512496585.jpg">
-<meta property="og:image" content="http://blog.majpyi.club/images/media/15216321899363/15249265349308.jpg">
-<meta property="og:updated_time" content="2019-03-30T03:06:18.448Z">
+<meta property="og:image" content="http://blog.majpyi.club/images/media/15247468524538/15247469812005.jpg">
+<meta property="og:image" content="http://blog.majpyi.club/images/media/15247468524538/15247506299044.jpg">
+<meta property="og:image" content="http://blog.majpyi.club/images/media/15247468524538/15247901641609.jpg">
+<meta property="og:image" content="http://blog.majpyi.club/images/media/15247468524538/15247903146093.jpg">
+<meta property="og:image" content="http://blog.majpyi.club/images/media/15247468524538/15247909418226.jpg">
+<meta property="og:image" content="http://blog.majpyi.club/images/media/15247468524538/15247910671172.jpg">
+<meta property="og:image" content="http://blog.majpyi.club/images/media/15247468524538/15247912845473.jpg">
+<meta property="og:image" content="http://blog.majpyi.club/images/media/15247468524538/15251865302623.jpg">
+<meta property="og:updated_time" content="2019-03-30T03:08:21.769Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello">
-<meta name="twitter:description" content="tomcatCaveatsTo have launchd start tomcat now and restart at login:  brew services start tomcatOr, if you don’t want/need a background service you can just run:  catalina run 注意事项要立即启动tomcat并在登录时重新启动：">
-<meta name="twitter:image" content="http://blog.majpyi.club/images/media/15216321899363/15216421688142.gif">
+<meta name="twitter:title" content="Junit4">
+<meta name="twitter:description" content="Junit4link  完善代码 测试失败两种情况 运行流程 常用注解 测试套件使用 参数化设置 spring 与 hibernate 整合测试">
+<meta name="twitter:image" content="http://blog.majpyi.club/images/media/15247468524538/15247469812005.jpg">
 
 
 
@@ -139,13 +142,13 @@
 
 
 
-  <link rel="canonical" href="http://blog.majpyi.club/2018/05/24/tomcat/"/>
+  <link rel="canonical" href="http://blog.majpyi.club/2018/02/05/Junit4 /"/>
 
 
 
 
 
-  <title> | Hello</title>
+  <title>Junit4 | Hello</title>
   
 
 
@@ -278,7 +281,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://blog.majpyi.club/2018/05/24/tomcat/">
+    <link itemprop="mainEntityOfPage" href="http://blog.majpyi.club/2018/02/05/Junit4 /">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="MY">
@@ -295,7 +298,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline"></h1>
+          <h1 class="post-title" itemprop="name headline">Junit4</h1>
         
 
         <div class="post-meta">
@@ -307,8 +310,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-24T20:41:26+08:00">
-                2018-05-24
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-05T22:50:18+08:00">
+                2018-02-05
               </time>
             
 
@@ -345,31 +348,15 @@
       
 
       
-        <h1 id="tomcat"><a href="#tomcat" class="headerlink" title="tomcat"></a>tomcat</h1><p>Caveats<br>To have launchd start tomcat now and restart at login:<br>  brew services start tomcat<br>Or, if you don’t want/need a background service you can just run:<br>  catalina run</p>
-<p>注意事项<br>要立即启动tomcat并在登录时重新启动：<br>   brew服务启动tomcat<br>或者，如果您不想/需要后台服务，您可以运行：<br>   卡塔利娜跑</p>
-<p><img src="/images/media/15216321899363/15216421688142.gif" alt=""></p>
-<p>客户端发送一个HTTP请求到服务器的请求消息包括以下格式：请求行（request line）、请求头部（header）、空行和请求数据四个部分组成.<br>HTTP响应也由四个部分组成，分别是：状态行、消息报头、空行和响应正文。</p>
-<p>通用网关接口（Common Gateway Interface/CGI）是一种重要的互联网技术，可以让一个客户端，从网页浏览器向执行在网络服务器上的程序请求数据。CGI描述了服务器和请求处理程序之间传输数据的一种标准</p>
-<p>在 tomcat 中项目放到 webapp 是可以直接访问的,放到 ROOT 下也是可以直接访问的.</p>
-<p><img src="/images/media/15216321899363/15240413777567.jpg" alt=""></p>
-<p><img src="/images/media/15216321899363/15240512420182.jpg" alt=""><br><img src="/images/media/15216321899363/15240512496585.jpg" alt=""></p>
-<p><img src="/images/media/15216321899363/15249265349308.jpg" alt=""></p>
-<p>在HTTPServletResponse接口中定义了一些代表HTTP响应状态代码的静态常量，如下所示。</p>
-<p>HTTPServletResponse. SC_BAD_REQUEST：对应的响应状态代码为400。</p>
-<p>由于明显的客户端错误（例如，格式错误的请求语法，太大的大小，无效的请求消息或欺骗性路由请求），服务器不能或不会处理该请求。</p>
-<p>HTTPServletResponse. SC_FOUND：对应的响应状态代码为302。</p>
-<p><strong>302 Found</strong>，原始描述短语为 <strong>Moved Temporarily</strong> ，是<a href="https://zh.wikipedia.org/wiki/HTTP%E5%8D%8F%E8%AE%AE" target="_blank" rel="external">HTTP协议</a>中的一个状态码(Status Code)。可以简单的理解为该资源原本确实存在，但已经被<strong>临时</strong>改变了位置；换而言之，就是请求的资源暂时驻留在不同的URI下<a href="https://zh.wikipedia.org/wiki/HTTP_302#cite_note-1" target="_blank" rel="external">[1]</a>，故而除非特别指定了缓存头部指示，该状态码不可缓存。</p>
-<p>HTTPServletResponse. SC_METHOD_NOT_ALLOWED：对应的响应状态代码为405。</p>
-<p>请求行中指定的请求方法不能被用于请求相应的资源。该响应必须返回一个Allow头信息用以表示出当前资源能够接受的请求方法的列表。例如，需要通过POST呈现数据的表单上的GET请求，或只读资源上的PUT请求。</p>
-<p>HTTPServletResponse. SC_NON_AUTHORITATIVE_INFORMATION：对应的响应状态代码为203。</p>
-<p>Non-Authoritative Information（自HTTP / 1.1起）</p>
-<p>服务器是一个转换代理服务器（transforming proxy，例如<a href="https://zh.wikipedia.org/wiki/%E7%B6%B2%E7%B5%A1%E5%8A%A0%E9%80%9F%E5%99%A8" target="_blank" rel="external">网络加速器</a>），以<code>200 OK</code>状态码为起源，但回应了原始响应的修改版本。</p>
-<p>HTTPServletResponse. SC_FORBIDDEN：对应的响应状态代码为403。</p>
-<p>服务器已经理解请求，但是拒绝执行它。与<a href="https://zh.wikipedia.org/wiki/HTTP%E7%8A%B6%E6%80%81%E7%A0%81#401" target="_blank" rel="external">401响应</a>不同的是，身份验证并不能提供任何帮助，而且这个请求也不应该被重复提交。如果这不是一个HEAD请求，而且服务器希望能够讲清楚为何请求不能被执行，那么就应该在实体内描述拒绝的原因。当然服务器也可以返回一个<a href="https://zh.wikipedia.org/wiki/HTTP%E7%8A%B6%E6%80%81%E7%A0%81#404" target="_blank" rel="external">404响应</a>，假如它不希望让客户端获得任何信息。</p>
-<p>HTTPServletResponse. SC_NOT_FOUND：对应的响应状态代码为404。</p>
-<p>HTTPServletResponse. SC_OK：对应的响应状态代码为200。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">HTTP 协议定义一些方法，以指明为获取客户端（如您的浏览器或我们的 CheckUpDown 机器人）所指定的具体网址资源而需要在 Web 服务器上执行的动作。则这些方法如下：</div><div class="line"></div><div class="line">OPTIONS( 选项 ) ：查找适用于一个特定网址资源的通讯选择。 在不需执行具体的涉及数据传输的动作情况下， 允许客户端来确定与资源相关的选项以及 / 或者要求， 或是一个服务器的性能。</div><div class="line">GET( 获取 ) ：检索由网址资源所确定的信息，如获取一个特定的网页或图片。这是最常用的方法。</div><div class="line">HEAD( 头 ) ：除了服务器只反馈标头信息而不是网址资源所确定的信息本身外， 基本同于 GET ( 获取 ) 。 可用于获取一个请求所要求的响应实体的元信息 ( metainformation) ，而不需传输响应实体本身。 经常用来测试超文本链接的有效性， 可达性， 和最近的修改。</div><div class="line">POST( 投寄 ) ：将数据提交到 Web 服务器，如 1 ）在电子公告板，新闻组中，或向 邮件名单发送信息， 2 ）提供输入数据 - 通常由一个公共网关接口(CGI) 表， 到 一个数据处理进程， 3 ）直接将记录添加到一个数据库中。</div><div class="line">PUT( 放置 ) ：将一个具体网址的数据设置（ 置入 / 替换）成客户提交的新数据。例如，将新的网页上载给服务器。</div><div class="line">DELETE( 删除 ) ：删除与网址资源相关的数据。例如，删除网页。</div><div class="line">TRACE( 跟踪 ) ：运行请求信息的一个远程应用层回送。 实际上是一个 &apos;ping&apos;, 用以测试 Web 服务器正在从客户端接收什么数据。</div><div class="line">CONNECT( 连接 ) ：保留以便通过代理服务器和隧道一起使用（如 SSL ）。这种方法只在 HTTP 1.1 版中定义， 而在先前的 1.0 版中却没有。</div><div class="line">所有 Web 服务器都可以被设置为允许或不允许任何方法。例如，如果一个 Web 服务器是 &apos; 只读 &apos; （客户端不能修改 Web 服务器上的网址资源） ，那么它可以被设置为不允许 PUT 和 DELETE 方法。 同样，如果没有用户输入（所有的网页都是静态的） ， 那么 POST 方法可设置为不允许。 所以， 405 错误可能会因 Web 服务器没有被设置为从客户端接受输入数据而出现。 另外， 如果客户端对请求中指明的具体网址资源没有足够的权力， 该错误也会出现。</div></pre></td></tr></table></figure>
-
+        <h1 id="Junit4"><a href="#Junit4" class="headerlink" title="Junit4"></a>Junit4</h1><p><a href="https://www.imooc.com/video/6844" target="_blank" rel="external">link</a></p>
+<p><img src="/images/media/15247468524538/15247469812005.jpg" alt=""></p>
+<h3 id="完善代码"><a href="#完善代码" class="headerlink" title="完善代码"></a>完善代码</h3><p><img src="/images/media/15247468524538/15247506299044.jpg" alt=""></p>
+<h3 id="测试失败两种情况"><a href="#测试失败两种情况" class="headerlink" title="测试失败两种情况"></a>测试失败两种情况</h3><p><img src="/images/media/15247468524538/15247901641609.jpg" alt=""></p>
+<h3 id="运行流程"><a href="#运行流程" class="headerlink" title="运行流程"></a>运行流程</h3><p><img src="/images/media/15247468524538/15247903146093.jpg" alt=""></p>
+<h3 id="常用注解"><a href="#常用注解" class="headerlink" title="常用注解"></a>常用注解</h3><p><img src="/images/media/15247468524538/15247909418226.jpg" alt=""></p>
+<h3 id="测试套件使用"><a href="#测试套件使用" class="headerlink" title="测试套件使用"></a>测试套件使用</h3><p><img src="/images/media/15247468524538/15247910671172.jpg" alt=""></p>
+<h3 id="参数化设置"><a href="#参数化设置" class="headerlink" title="参数化设置"></a>参数化设置</h3><p><img src="/images/media/15247468524538/15247912845473.jpg" alt=""><br><img src="/images/media/15247468524538/15251865302623.jpg" alt=""></p>
+<h3 id="spring-与-hibernate-整合测试"><a href="#spring-与-hibernate-整合测试" class="headerlink" title="spring 与 hibernate 整合测试"></a>spring 与 hibernate 整合测试</h3>
       
     </div>
     
@@ -393,8 +380,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/05/05/递归与回溯/" rel="next" title="">
-                <i class="fa fa-chevron-left"></i> 
+              <a href="/2018/01/15/反射——Java高级开发必须懂的/" rel="next" title="反射——Java高级开发必须懂的">
+                <i class="fa fa-chevron-left"></i> 反射——Java高级开发必须懂的
               </a>
             
           </div>
@@ -403,8 +390,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/07/31/细说多线程之Thread VS Runnable/" rel="prev" title="">
-                 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/02/08/tomcat/" rel="prev" title="Tomcat">
+                Tomcat <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -530,7 +517,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#tomcat"><span class="nav-number">1.</span> <span class="nav-text">tomcat</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Junit4"><span class="nav-number">1.</span> <span class="nav-text">Junit4</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#完善代码"><span class="nav-number">1.0.1.</span> <span class="nav-text">完善代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#测试失败两种情况"><span class="nav-number">1.0.2.</span> <span class="nav-text">测试失败两种情况</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#运行流程"><span class="nav-number">1.0.3.</span> <span class="nav-text">运行流程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常用注解"><span class="nav-number">1.0.4.</span> <span class="nav-text">常用注解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#测试套件使用"><span class="nav-number">1.0.5.</span> <span class="nav-text">测试套件使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参数化设置"><span class="nav-number">1.0.6.</span> <span class="nav-text">参数化设置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#spring-与-hibernate-整合测试"><span class="nav-number">1.0.7.</span> <span class="nav-text">spring 与 hibernate 整合测试</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
