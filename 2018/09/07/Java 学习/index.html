@@ -1,0 +1,1093 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="Java 学习面向对象思想与基本原理 JRE:JVM+ 类库JDK:JRE+Java tool 大小写敏感类名:的首字母应该是大写,如果有若干单词组成那么每个单词的首字母应该大写方法名:以小写开头,如果方法有若干单词,后面每个单词首字母大写 成员变量:可以称为对象的特有数据，定义在类中,整个类中都是可以访问,存在堆内存的对象中.局部变量:在函数,语句,局部代码块中,只在所属区域有效,存在栈内存的方">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hello">
+<meta property="og:url" content="http://blog.majpyi.club/2018/09/07/Java 学习/index.html">
+<meta property="og:site_name" content="Hello">
+<meta property="og:description" content="Java 学习面向对象思想与基本原理 JRE:JVM+ 类库JDK:JRE+Java tool 大小写敏感类名:的首字母应该是大写,如果有若干单词组成那么每个单词的首字母应该大写方法名:以小写开头,如果方法有若干单词,后面每个单词首字母大写 成员变量:可以称为对象的特有数据，定义在类中,整个类中都是可以访问,存在堆内存的对象中.局部变量:在函数,语句,局部代码块中,只在所属区域有效,存在栈内存的方">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://blog.majpyi.club/images/media/15181864597804/15203128200501.jpg">
+<meta property="og:image" content="http://blog.majpyi.club/images/media/15181864597804/15182320093501.jpg">
+<meta property="og:image" content="http://blog.majpyi.club/images/media/15181864597804/15182325258977.jpg">
+<meta property="og:image" content="http://blog.majpyi.club/images/media/15181864597804/15182327352023.jpg">
+<meta property="og:image" content="http://blog.majpyi.club/images/media/15181864597804/15182331409460.jpg">
+<meta property="og:image" content="http://blog.majpyi.club/images/media/15181864597804/15182340244358.jpg">
+<meta property="og:image" content="http://blog.majpyi.club/images/media/15181864597804/15182331999904.jpg">
+<meta property="og:image" content="http://blog.majpyi.club/images/media/15181864597804/15182334996779.jpg">
+<meta property="og:image" content="http://blog.majpyi.club/images/media/15181864597804/15182462384748.jpg">
+<meta property="og:image" content="http://blog.majpyi.club/images/media/15181864597804/15182516879803.jpg">
+<meta property="og:image" content="http://blog.majpyi.club/images/media/15181864597804/15182557652952.jpg">
+<meta property="og:image" content="http://blog.majpyi.club/images/media/15181864597804/15182674467262.jpg">
+<meta property="og:image" content="http://blog.majpyi.club/images/media/15181864597804/15182682003131.jpg">
+<meta property="og:image" content="http://blog.majpyi.club/images/media/15181864597804/15182694386434.jpg">
+<meta property="og:image" content="http://blog.majpyi.club/images/media/15181864597804/15184074058945.jpg">
+<meta property="og:image" content="http://blog.majpyi.club/images/media/15181864597804/15184253385954.jpg">
+<meta property="og:image" content="http://blog.majpyi.club/images/media/15181864597804/15184279472101.jpg">
+<meta property="og:image" content="http://blog.majpyi.club/images/media/15181864597804/15184886080363.jpg">
+<meta property="og:image" content="http://blog.majpyi.club/images/media/15181864597804/15184897161417.jpg">
+<meta property="og:image" content="http://blog.majpyi.club/images/media/15181864597804/15185076255334.jpg">
+<meta property="og:image" content="http://blog.majpyi.club/images/media/15181864597804/15185076520612.jpg">
+<meta property="og:image" content="http://blog.majpyi.club/images/media/15181864597804/15185090061846.jpg">
+<meta property="og:image" content="http://blog.majpyi.club/images/media/15181864597804/15186504257367.jpg">
+<meta property="og:image" content="http://blog.majpyi.club/images/media/15181864597804/15186511505171.jpg">
+<meta property="og:image" content="http://blog.majpyi.club/images/media/15181864597804/15186518501802.jpg">
+<meta property="og:image" content="http://blog.majpyi.club/images/media/15181864597804/15186519942472.jpg">
+<meta property="og:image" content="http://blog.majpyi.club/images/media/15181864597804/15186528739254.jpg">
+<meta property="og:image" content="http://blog.majpyi.club/images/media/15181864597804/15187893076339.jpg">
+<meta property="og:image" content="http://blog.majpyi.club/images/media/15181864597804/15235005398607.jpg">
+<meta property="og:image" content="http://blog.majpyi.club/images/media/15181864597804/15235005511248.jpg">
+<meta property="og:image" content="http://blog.majpyi.club/images/media/15181864597804/15232559073840.jpg">
+<meta property="og:image" content="http://blog.majpyi.club/images/media/15181864597804/15232558064078.jpg">
+<meta property="og:image" content="http://blog.majpyi.club/images/media/15181864597804/15188321458111.jpg">
+<meta property="og:image" content="http://blog.majpyi.club/images/media/15181864597804/15188514263830.jpg">
+<meta property="og:image" content="http://blog.majpyi.club/images/media/15181864597804/15188516244292.jpg">
+<meta property="og:image" content="http://blog.majpyi.club/images/media/15181864597804/15188532990667.jpg">
+<meta property="og:image" content="http://blog.majpyi.club/images/media/15181864597804/15188553504126.jpg">
+<meta property="og:image" content="http://blog.majpyi.club/images/media/15181864597804/15188640410893.jpg">
+<meta property="og:image" content="http://blog.majpyi.club/images/media/15181864597804/15188640595066.jpg">
+<meta property="og:image" content="http://blog.majpyi.club/images/media/15181864597804/15189230191280.jpg">
+<meta property="og:image" content="http://blog.majpyi.club/images/media/15181864597804/15189229564978.jpg">
+<meta property="og:image" content="http://blog.majpyi.club/images/media/15181864597804/15222212599160.jpg">
+<meta property="og:image" content="http://blog.majpyi.club/images/media/15181864597804/15223101592460.jpg">
+<meta property="og:image" content="http://blog.majpyi.club/images/media/15181864597804/15223101903087.jpg">
+<meta property="og:image" content="http://blog.majpyi.club/images/media/15181864597804/15244680579538.jpg">
+<meta property="og:updated_time" content="2019-03-30T02:40:14.200Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hello">
+<meta name="twitter:description" content="Java 学习面向对象思想与基本原理 JRE:JVM+ 类库JDK:JRE+Java tool 大小写敏感类名:的首字母应该是大写,如果有若干单词组成那么每个单词的首字母应该大写方法名:以小写开头,如果方法有若干单词,后面每个单词首字母大写 成员变量:可以称为对象的特有数据，定义在类中,整个类中都是可以访问,存在堆内存的对象中.局部变量:在函数,语句,局部代码块中,只在所属区域有效,存在栈内存的方">
+<meta name="twitter:image" content="http://blog.majpyi.club/images/media/15181864597804/15203128200501.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://blog.majpyi.club/2018/09/07/Java 学习/"/>
+
+
+
+
+
+  <title> | Hello</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Hello</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://blog.majpyi.club/2018/09/07/Java 学习/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="MY">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hello">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline"></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-07T10:49:49+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="Java-学习"><a href="#Java-学习" class="headerlink" title="Java 学习"></a>Java 学习</h1><h2 id="面向对象思想与基本原理"><a href="#面向对象思想与基本原理" class="headerlink" title="面向对象思想与基本原理"></a>面向对象思想与基本原理</h2><hr>
+<p>JRE:JVM+ 类库<br>JDK:JRE+Java tool</p>
+<p>大小写敏感<br>类名:的首字母应该是大写,如果有若干单词组成那么每个单词的首字母应该大写<br>方法名:以小写开头,如果方法有若干单词,后面每个单词首字母大写</p>
+<p>成员变量:可以称为对象的特有数据，定义在类中,整个类中都是可以访问,存在堆内存的对象中.<br>局部变量:在函数,语句,局部代码块中,只在所属区域有效,存在栈内存的方法中,随所属区域的执行而存在,所属区域的消失而消失</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"> 成员变量：</div><div class="line"></div><div class="line">    ①成员变量定义在类中，在整个类中都可以被访问。</div><div class="line"></div><div class="line">    ②成员变量随着对象的建立而建立，随着对象的消失而消失，存在于对象所在的堆内存中。</div><div class="line"></div><div class="line">    ③成员变量有默认初始化值。</div><div class="line"></div><div class="line">局部变量：</div><div class="line"></div><div class="line">    ①局部变量只定义在局部范围内，如：函数内，语句内等，只在所属的区域有效。</div><div class="line"></div><div class="line">    ②局部变量存在于栈内存中，作用的范围结束，变量空间会自动释放。</div><div class="line"></div><div class="line">    ③局部变量没有默认初始化值</div></pre></td></tr></table></figure>
+<hr>
+<p>浮点数到整数的转换是通过舍弃小数得到，而不是四舍五入</p>
+<hr>
+<p>python 的二进制，八进制，十六进制<br>二进制：0b1000 = 8<br>八进制：0o123 = 83<br>（数字0，字母o）<br>十六进制：0xAB = 171</p>
+<p>java 表示八进制,二进制,十六进制<br>前缀 0b 代表2进制<br>前缀 0 表示 8 进制<br>前缀 0x 代表 16 进制</p>
+<h2 id="上面的进制表示不区分大小写"><a href="#上面的进制表示不区分大小写" class="headerlink" title="上面的进制表示不区分大小写"></a>上面的进制表示不区分大小写</h2><p>访问修饰符:<br>public,     其他包<br>protected,  同一包+子孙类<br>default,    同一包<br>private     当前类<br>非访问修饰符<br>static,         类成员<br>final,          固定值<br>abstract,       抽象（等具体来实现）<br>synchronized,   同步（防止死锁与脏数据）<br>volatile</p>
+<p>final变量<br>使用final修饰基本类型的变量，一旦对该变量赋值之后，就不能重新赋值了。但是对于引用类型变量，因为保存的只是引用，final只能保证引用类型变量所引用的地址不改变，但不保证这个对象不改变，这个对象完全可以发生改变。</p>
+<p>abstract 抽象类不能用来实例化对象，声明抽象类的唯一目的是为了将来对该类进行扩充。</p>
+<hr>
+<p>Java 中字符串也是对象</p>
+<p>java 中有方法的重载,而 python 中没有,因为 python 中不需要，python 是不严格的语言</p>
+<p>不管你与否自定义构造方法，所有的类都有构造方法，因为Java自动提供了一个默认构造方法，它把所有成员初始化。</p>
+<hr>
+<p>函数:定义入口,提供一种功能<br>函数中只能调用函数,不可以在函数内部定义函数<br>定义函数时,函数的结果应该返回给调用者,交由调用者处理<br>主函数的目的只是调用其他的函数<br>定义函数需要两个明确:<br>1.这个功能的结果是什么?  比如:结果的类型<br>2.这个功能实现过程中是否需要未知内容参与运算?  比如:参数的个数,参数的类型</p>
+<p>if else 语句有返回值就可以简写成三元组</p>
+<p>重载:<br>同一个类,同名,参数个数或者参数类型不同,函数重载与返回值无关,函数的调用要确定,严谨.</p>
+<p>不同参数函数一般可以复用,但是不同类型返回值一般不可以复用</p>
+<hr>
+<p>内存的划分:<br>1.寄存器<br>2.本地方法区<br>3.方法区(数据区,共享区)<br>方法区:又叫静态区，跟堆一样，被所有的线程共享。方法区包含所有的class和static变量.方法区中包含的都是在整个程序中永远唯一的元素，如class，static变量。<br>4.栈内存:局部变量(方法),变量所属作用域一旦结束,该变量就会自动释放<br>5.堆内存:数组与对象(数组就是对象),凡是 new 建立的都在堆中<br>存实体:存储多数据的地方.<br>每个实体都有首地址值,堆内存中的变量都有默认初始化值,根据类型的不同而不同,垃圾回收机制</p>
+<hr>
+<p>int[ ]arr = new int [3];<br>相当于把堆内存中的地址赋给栈内存的变量(引用数据类型)指针=引用</p>
+<hr>
+<p>c++ 中的析构函数处理垃圾<br>java 垃圾回收机制</p>
+<p>局部代码块</p>
+<p>基本数据类型,x=4,把要运算的数据储存在该变量当中</p>
+<p>system.out.println(arr)     // [I@c17164<br>[代表是个数组型实体          [I 实体类型<br>I 代表是个int<br>@ 指向地址  c17164十六进制的哈希值</p>
+<p>对象已知的事物被称为实例变量,可以执行动作被称为方法</p>
+<p>通过值传递,就是同过拷贝传递</p>
+<hr>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">byte b=1;</div><div class="line">byte a=1;</div><div class="line">byte c=2;</div><div class="line">c = b+a;</div><div class="line"></div><div class="line">c=3+7;//这里是正确的，因为是常量可以进行检查，看是不是会超过范围</div></pre></td></tr></table></figure>
+<p>在这里会报错,因为c 的右边是变量，值是不固定的,为了安全性会报错比如127+127就会超过 short 的范围,而改为 int 型就不会报错了因为int 是默认类型,会进行自动转换。</p>
+<p><img src="/images/media/15181864597804/15203128200501.jpg" alt=""><br>int 的一共32位，首位表示正负，超过范围会变为负数，但是不会报错，因为底层会强制转化，舍弃高位，是默认类型</p>
+<p>负数只参考被模数 -5%2=-1  5%-2=1</p>
+<hr>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">System.out.println(1+&quot;1&quot;);      11</div><div class="line">System.out.println(1+&apos;1&apos;);      50</div><div class="line">System.out.println(&apos;1&apos;+1);      50</div></pre></td></tr></table></figure>
+<hr>
+<p>short s = 3;<br>s+=4;编译成功,这个是一个赋值运算,与上面的原理一样,3是一个 int, 在检查在范围内后,底层会进行类型转换<br>s=s+4;编译失败,这个不会进行自动转换如果想和上面的一样的话,需要 s=(short)(s+4),这样就可以了</p>
+<hr>
+<p>无符号右移(包括最高位的符号位也右移),^异或,~反</p>
+<p>左移几位其实就是该数据乘以2的几次方.&lt;&lt;可以完成2的幂运算</p>
+<p>无论是左移还是右移,高位出现的空位,原来是什么就补什么,保证符号的一致性</p>
+<hr>
+<p>数组对应关系:查表法</p>
+<p>局部变量没有默认值,使用前必须初始化,而实例变量会有默认值</p>
+<p>‘’单引号代表单个字符,只能有一个字符<br>“”代表字符串可以有多个字符</p>
+<p>二维数组</p>
+<ol>
+<li>int[] arr = new int [3][2];</li>
+<li>int [][] arr = new int[3][];</li>
+</ol>
+<p>数组与对象都是分装数据,数组封装的是同一类事物的数据,对象是封装一个事物中所具有的数据</p>
+<p>import 与 c 的 include 并不是相同的,运用 import 只是帮你省下每个类前面的包名称而已,程序不会因为import 变大或变慢</p>
+<p>类对事物的描述通常只关心:属性与行为</p>
+<p>Car c = new Car()<br>new 在内存中创建一个 car 的对象,然后用 car 这个类类型的引用 c 指向这个新建的对象</p>
+<hr>
+<p>栈找不到变量到堆里面去找,堆里面都是实体</p>
+<p>类类型的变量一定指向对象,要不就是 null</p>
+<hr>
+<p>匿名对象:<br>new Car()定义对象的简写格式<br>1.当对象对<strong>方法</strong>仅进行<strong>一次</strong>调用的时候<br>2.匿名函数可以作为实际参数进行传递</p>
+<p>按值调用（call by value）<br>按引用调用（call by reference）</p>
+<p>基本数据类型与引用数据类型的值传递</p>
+<p>在 c++ 中有1.按值传递 2.按地址传递 3.按引用传递</p>
+<p>封装:隐藏实现细节</p>
+<p>private 用于修饰成员,不能修饰局部</p>
+<p>私有仅仅是封装的一种体现而已,封装最小的体现就是函数</p>
+<p>创建对象都必须通过构造函数初始化,没有就会生成一个默认的构造函数</p>
+<p>一般函数与构造函数的区别:<br>构造函数:对象创建时,就会调用对应的构造函数,对对象初始化,只会调用一次<br>一般函数:对象创建后,需要函数功能时才调用,可以调用多次</p>
+<p>java 是强类型,参数顺序不可以变,如果改变就需要进行进行函数的重载</p>
+<p>构造函数首字母大写,一般函数首字母小写,其他单词首字母大写</p>
+<blockquote>
+<p>定义过构造函数后就没有默认的构造函数了</p>
+</blockquote>
+<p>this:<br>一个类中的成员,只要想运行都必须要用对象调用<br>this 语句只能写在构造函数的第一行<br>本类中用到本类对象</p>
+<p>static:对内存的节约<br>被对象所共享的数据<br>静态变量：<br>static 关键字用来声明独立于对象的静态变量，无论一个类实例化多少对象，它的静态变量只有一份拷贝。 静态变量也被称为类变量。局部变量不能被声明为 static 变量。<br>静态方法：<br>static 关键字用来声明独立于对象的静态方法。静态方法不能使用类的非静态变量。静态方法从参数列表得到数据，然后计算这些数据</p>
+<p>成员变量(实例变量)与静态变量(类变量)区别:<br>1.生命周期不同<br>成员变量随着对象的创建而存在,随着对象被回收而释放<br>静态变量随着类的加载而存在,随着类的消失而消失(其实类也是一种对象)<br>2.调用方式不同<br>成员变量只能被对象调用<br>静态变量不仅能被对象调用,还可以被类名调用<br>3.数据存储位置不同<br>成员变量数据存储在堆内存的对象中,所以也叫对象特有数据<br>静态变量数据存储在方法区(共享数据区)的静态区,所以也叫对象的共享数据</p>
+<p>静态使用的注意事项:<br>1.静态方法只能访问静态成员(成员可以使变量或者函数)(静态成员比成员变量先存在,对象没生成访问不到)<br>2.静态方法中不可以使用 super 或者 this<br>3.主函数是静态的</p>
+<p>静态前面省略的 this 代表着类名</p>
+<p>调用一个方法要么用类名调用,要么用对象调用</p>
+<p>直接在主函数中不生成对象直接调用函数的话是类函数,这时候函数式需要静态的</p>
+<p>主函数的分析<br>public static void main(String[] args)<br>格式是固定的,被 jvm 识别与调用</p>
+<p>public: 权限必须为最大的<br>static: 不需要对象的,直接用主函数类名调用即可<br>void: 主函数没有具体的返回值(函数返回值传递给调用的函数)<br>mian: 函数名,不是关键字,只是一个 jvm 可以识别的固定的名字<br>Sting[] args: 参数列表,数组类型参数,而且元素都是字符串类型</p>
+<p>方法区代码存放区(方法表),在栈内存区进行运行</p>
+<p>sout 不进入栈内存区，没有通过对象而是通过类直接进行调用</p>
+<p>静态什么时候用?<br>1.静态变量 对象如果共有可以提取出来静态,对象不需要修改只需要使用的话<br>2.静态函数 看功能是否需要访问非静态成员变量</p>
+<p>静态代码块:  static{}<br>随着类的加载而执行(而不是创建对象时)只执行一次<br>作用:用于给类进行初始化</p>
+<p>对象是用来访问特有数据的,非静态需要对象调用<br>没有访问对象中特有数据该对象的创建是没有意义的,不如直接通过类进行调用</p>
+<p>{}构造代码块,在对象创建时进行执行,创建几次对象调用几次,所有对象<br>构造函数是给对应对象进行针对性的初始化<br>局部代码块:限定局部变量的生存周期</p>
+<p>private xxx(){} 该类中方法都是静态的,所以该类是不需要创建对象的,为了保证不让其创建该类的对象,可以把构造函数私有化</p>
+<p>用数字表示 比如数字0，1 代表 private 是私有的</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">继承:</div><div class="line">1.提高代码的复用性</div><div class="line">2.让类与类之间产生了关系,给多态提供了前提</div><div class="line"></div><div class="line">java 中支持单继承,不直接支持多继承,但对 c++ 中的多继承机制进行了改良</div><div class="line">多父类中有相同成员,会产生调用不确定性, java 支持多层(多重)继承,继承体系,java 中通过多实现的方式来体现</div><div class="line"></div><div class="line">当要使用一个继承体系时:</div><div class="line">1.查看该体系中的顶层类,了解该体系的基本功能</div><div class="line">2.创建体系中的最子类对象,完成功能的使用 </div><div class="line"></div><div class="line">当本类中的成员与局部变量同名用 this 区分</div><div class="line">当子父类中的成员变量同名用 super 区分父类</div><div class="line"></div><div class="line">this: 代表一个本类对象的引用</div><div class="line">super: 代表一个父类空间</div><div class="line"></div><div class="line">overload 重载:同一个类中</div><div class="line">override 覆盖:子类中.</div><div class="line">覆盖:</div><div class="line">1.子类方法覆盖父类方法时,子类权限必须大于等于父类的权限</div><div class="line">2.静态只能覆盖静态,或者被静态覆盖</div><div class="line"></div><div class="line">在子类的构造函数中第一行有一个默认的隐式语句,最后还有隐式的 return;  super();//调用的就是父类中的空参数的构造函数</div><div class="line">为什么子类实例化时要访问父类中的构造函数?</div><div class="line">因为子类继承父类,获取到父类中的内容,需要在使用父类内容之前,需要看看父类是如何对自己的内容进行初始化的,父类的初始化动作要先完成</div><div class="line">子类构造函数中如果使用 this 调用本类构造函数时,那么 super 就没有了,因为 super 和 this 都只能定义在第一行,所以只能有一个,但是可以通过 this, 保证子类中肯定有其他的构造函数访问父类的构造函数</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">一个对象实例化过程:</div><div class="line">Person  p = new Person();</div><div class="line">1,JVM 会读取指定的路径下的 Person.class 文件,加载进内存,并会先加载 Person 的父类(如果有直接的父类的情况下)</div><div class="line">2.在堆内存中开辟的空间,分配地址</div><div class="line">3.在对象空间中,对对象中的属性进行默认初始化</div><div class="line">4.调用相应的构造函数进行初始化</div><div class="line">5.在构造函数中,第一行会先调用父类中构造函数进行初始化</div><div class="line">6.父类初始化完毕后,再对子类的属性进行显示初始化</div><div class="line">7.在进行子类构造函数的特定初始化</div><div class="line">8.初始化完毕后,降地址值给引用变量</div></pre></td></tr></table></figure>
+<p>继承的弊端:打破了封装性<br>final 关键字:<br>1.final可以修饰类,方法,变量<br>2.修饰的类不可以被继承<br>3.修饰的方法不可以被覆盖<br>4.修饰的变量是一个常量,只能赋值一次</p>
+<p>常量用大写,如果有多个单词中间可以用_连接</p>
+<p>只有声明而没有实现时,该方法就是抽象方法,需要被 abstract 修饰<br>抽象方法必须定义在类中,不可以被实例化</p>
+<p>1.抽象类有构造函数,用于给子类进行初始化<br>2.抽象类可以不定义抽象方法吗?<br>可以,但是很少见,目的就是不让该类创建对象. AWT 的适配器对象就是这种类.<br>通常这个类中的方法有方法体,但是没有内容<br>3.抽象关键字不可以和哪些关键字共存?<br>private 不行(需要被继承)<br>static 不行(静态不需要对象)<br>final 不行(不能覆盖,继承)<br>4.抽象类与一般类的区别<br>相同点:都是用来描述事物的,都在内部定了成员<br>不同:一般类有足够的信息描述事物.抽象类描述事物的信息有可能不足.<br>    补办类中不能定义抽象方法,而抽象类中可以定义抽象与非抽象<br>    一般类可以被实例化,抽象类不可以被实例化<br>5.抽象类一定是父类吗?<br>是的.因为需要子类覆盖其方法后才可以对子类进行实例化. </p>
+<p>哪个对象调用 this,持有一个对象的引用</p>
+<p>方法 void show(){};</p>
+<blockquote>
+<p>抽象方法 void show(); 没有{}</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">接口:</div><div class="line">当一个抽象类方法都是抽象的时候,这是可以将抽象类用接口表示</div><div class="line">对于接口当中常见的成员都有固定的修饰符</div><div class="line">1.全局变量: public static final(不写也会自动添加)</div><div class="line">2.抽象方法: public abstract</div><div class="line">成员都是公共的权限</div><div class="line"></div><div class="line">子类覆盖接口的所有方法后,该子类才可以实例化,否则子类仍是一个抽象类</div><div class="line">java 中不直接支持多继承,因为会出现调用的不确定性.所以 java 将多继承进行改良,在 java 中变成了多实现</div><div class="line">一个类可以实现多个接口</div><div class="line"></div><div class="line">一个类在继承另一个类的同时,还可以实现多个接口.</div><div class="line">接口的出现避免了单继承的局限性</div><div class="line"></div><div class="line">接口与接口之间是继承关系,接口与接口之间还可以实现多继承</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">抽象类和接口的异同点：</div><div class="line">相同点：</div><div class="line">	都是不断向上抽取而来的。</div><div class="line">不同点：</div><div class="line">	1，抽象类需要被继承，而且只能单继承。</div><div class="line">	   接口需要被实现，而且可以多实现。 </div><div class="line">	2，抽象类中可以定义抽象方法和非抽象方法，子类继承后，可以直接使用非抽象方法。</div><div class="line">	   接口中只能定义抽象方法，必须由子类去实现。 </div><div class="line">	3，抽象类的继承，是is a关系，在定义该体系的基本共性内容。</div><div class="line">	   接口的实现，是 like a 关系，在定义体系额外功能。</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">多态:简单说就是一个对象对应着不同的类型</div><div class="line">多态在代码中的体现:</div><div class="line">父类或者接口的引用指向子类的对象</div><div class="line"></div><div class="line">多态的好处:</div><div class="line">提高代码的扩展性,前期定义的代码可以使用后期的内容</div><div class="line"></div><div class="line">多态的弊端:</div><div class="line">前期定义的内容不能使用,(调用)后期子类的特有内容</div><div class="line"></div><div class="line">多态的前提:</div><div class="line">1.必须有关系,继承,实现.</div><div class="line">2.要有覆盖</div><div class="line"></div><div class="line"></div><div class="line">自动类型提升,猫提升为动物类型,但是特有功能无法访问,作用就是限制对特有功能的访问.</div><div class="line">向上转型:如果仍想用具体动物猫的特有功能,可以将该对象向下转型.</div><div class="line">Animal a = new Cat();</div><div class="line">Cat c = (Cat) a;</div><div class="line">c.特殊方法</div></pre></td></tr></table></figure>
+<p>instanceof 在多态中来判断,进行判断是否可以进行转型.<br>对于判断对象的具体类型,只能用于引用数据类型判断,通常在向下转型前用于健壮性的判断.</p>
+<blockquote>
+<p>覆盖只发生在函数上,与成员变量没关系.</p>
+</blockquote>
+<p>多态时成员的特点:<br>1.成员变量<br>2.成员函数<br>3.静态变量</p>
+<p>多态解耦合性,接口向外暴露规则</p>
+<p>左右两边类型不一致:多态</p>
+<hr>
+<p>内部类: 直接访问外部类中的内部类中的成员<br>Outer.Inner in = new Outer().new Inner();<br>in.show()<br>如果内部类是静态的,相当于一个外部类<br>Outer.Inner in = new Outer.Inner();<br>in.show()<br>如果内部类是静态的,成员是静态的<br>Outer.Inner.function();function 是成员内的静态方法</p>
+<p>如果内部类中定义了静态成员,该内部类也必须是静态的(不然内部类不进行加载,也就无法调用静态成员)</p>
+<p>为什么外部类能直接访问外部类中成员呢?<br>因为内部类持有外部类的引用   外部类名. this</p>
+<p>局部内部类:在方法中定义的类</p>
+<p>内部类可以存放在局部位置上<br>内部类的局部位置上只能访问局部中被 final 修饰的局部变量<br>在内部类中访问局部变量,需要被声明为最终类型</p>
+<hr>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">匿名内部类,就是内部类简写格式</div><div class="line">前提:</div><div class="line">内部类必须继承或者实现外部类或者接口</div><div class="line">其实就是一个匿名子类对象</div><div class="line">格式: new 父类 or 接口</div><div class="line"></div><div class="line"></div><div class="line">通常的使用场景之一：</div><div class="line">当函数参数是接口类型时，而且接口中的方法不超过三个。(超过影响阅读)</div><div class="line">可以用匿名内部类作为实际参数进行传递</div></pre></td></tr></table></figure>
+<p>子类中的构造代码块比构造函数先执行,但是在父类中的构造函数之后执行<br>如果在父类构造函数中调用被子类覆盖的方法,则子类方法中的变量处于默认初始化的状态.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div></pre></td><td class="code"><pre><div class="line">class Fu</div><div class="line">&#123;</div><div class="line">    int num = 2 ;</div><div class="line">    Fu()</div><div class="line">    &#123;</div><div class="line">        System.out.println(&quot;F .....&quot;+ num);</div><div class="line">        show();</div><div class="line">    &#125;</div><div class="line">    void show()</div><div class="line">        &#123;</div><div class="line">            System.out.println(&quot;Fu .....&quot;+ num);</div><div class="line">        &#125;</div><div class="line">&#125;</div><div class="line">class Zi extends Fu</div><div class="line">&#123;</div><div class="line">    int a =1;</div><div class="line">    &#123;</div><div class="line">        System.out.println(&quot; 构造代码块&quot;);</div><div class="line">    &#125;</div><div class="line">    Zi()</div><div class="line">    &#123;</div><div class="line">      System.out.println(&quot;mjy&quot;+a);</div><div class="line"></div><div class="line">    &#125;</div><div class="line">    void show()</div><div class="line">    &#123;</div><div class="line">        System.out.println(&quot;Zi .....&quot; + a);</div><div class="line">    &#125;</div><div class="line">    void show1()</div><div class="line">    &#123;</div><div class="line">        System.out.println(num);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">class demo</div><div class="line">&#123;</div><div class="line">    public static void main(String[] args)</div><div class="line">    &#123;</div><div class="line">        Zi z =new Zi();</div><div class="line">        z.show();</div><div class="line">        z.show1();</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">构造函数加载</div><div class="line">默认初始化 </div><div class="line">class Zi extends Fu</div><div class="line">&#123;</div><div class="line">    &#123;</div><div class="line">        构造代码块</div><div class="line">    &#125;</div><div class="line">    Zi()</div><div class="line">    &#123;</div><div class="line">        super()</div><div class="line">        显示初始化</div><div class="line">        构造代码块初始化</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="异常"><a href="#异常" class="headerlink" title="异常"></a>异常</h3><p>异常类,将不正常的情况进行了描述与封装<br>将正常流程代码与问题处理代码分离,提高阅读性<br>将其共性向上抽取形成</p>
+<p>异常体系:分成两大类<br>Throwable:<br>1.一般不可处理的. Error<br>特点:是由 JVM 抛出的严重性问题,这种问题发生一般不针对性处理,直接修改程序</p>
+<ol>
+<li>可以处理的. Exception</li>
+</ol>
+<p>throws throw ,凡是可以被这两个关键字所操作的的类和对象对具有可抛性.</p>
+<p>错误只有两种处理方法:<br>1.抛出 throws throw<br>2.捕获 try catch 之后进行处理</p>
+<p>protected : 对同一包内的类和所有子类可见。使用对象：变量、方法。 注意：不能修饰类（外部类）。<br>在同一个包内，其他的类都是可见的。而在其他不同的包内，只有子类可见。</p>
+<p>在子类中自己独有的方法，如果 new 一个子类对象，通过多态用父类(包括接口)型指向他，则子类对象的独有方法就会消失，不能被引用，因为已经提升为父类，只能使用父类的内容，而隐藏了自己的类型</p>
+<p>编译看左边，运行看右边:</p>
+<blockquote>
+<p>编译时类型由声明该变量时使用的类型决定,运行时类型由实际赋给该变量的对象决定.如果便已是类型与运行时类型不一致,就可能出现所谓的多态.</p>
+<p>多态，父类型指向子类对象</p>
+<p>静态只能覆盖静态</p>
+</blockquote>
+<hr>
+<p><img src="/images/media/15181864597804/15182320093501.jpg" alt=""><br>子类只能覆盖父类的方法<br>变量是没法覆盖的</p>
+<hr>
+<p><img src="/images/media/15181864597804/15182325258977.jpg" alt=""><br>只能有一个构造函数,如果有构造函数,那么默认的构造函数将会消失.</p>
+<hr>
+<p><img src="/images/media/15181864597804/15182327352023.jpg" alt=""></p>
+<hr>
+<p><img src="/images/media/15181864597804/15182331409460.jpg" alt=""></p>
+<p><img src="/images/media/15181864597804/15182340244358.jpg" alt=""><br>这样就是可行的</p>
+<hr>
+<p><img src="/images/media/15181864597804/15182331999904.jpg" alt=""></p>
+<hr>
+<p><img src="/images/media/15181864597804/15182334996779.jpg" alt=""></p>
+<hr>
+<p>两种创建线程的方式一个是继承一个是实现接口<br><img src="/images/media/15181864597804/15182462384748.jpg" alt=""></p>
+<hr>
+<p>进程同步问题<br>在卖票的例子中，如果我们使用的是继承父对象的线程，就会把一个票卖多次，但是如果我们实现 runable 接口就把线程任务封装进来了，然后把实现 runable 的对象传入 Thread 中，就可以保证票只卖一次，因为所有线程处理的都是同一个对象。</p>
+<p><img src="/images/media/15181864597804/15182516879803.jpg" alt=""></p>
+<p>同步的好处与弊端：好处：解决了线程的安全性问题<br>弊端：相对降低了效率，同步外的线程都会判断同步锁。</p>
+<p>加入同步之后同步问题依然没有解决的需要考虑同步的前提<br>同步的前提条件：同步中必须有多个线程并使用同一个锁</p>
+<p><img src="/images/media/15181864597804/15182557652952.jpg" alt=""></p>
+<p><img src="/images/media/15181864597804/15182674467262.jpg" alt=""></p>
+<hr>
+<p>this 关键字用来表示当前对象本身，或当前类的一个实例，通过 this 可以调用本对象的所有方法和属性。注意：this 只有在类实例化后才有意义。</p>
+<p><img src="/images/media/15181864597804/15182682003131.jpg" alt=""></p>
+<p>单例模式同步问题<br><img src="/images/media/15181864597804/15182694386434.jpg" alt=""></p>
+<hr>
+<p><img src="/images/media/15181864597804/15184074058945.jpg" alt=""></p>
+<hr>
+<p><img src="/images/media/15181864597804/15184253385954.jpg" alt=""></p>
+<hr>
+<p><img src="/images/media/15181864597804/15184279472101.jpg" alt=""></p>
+<hr>
+<p><img src="/images/media/15181864597804/15184886080363.jpg" alt=""></p>
+<hr>
+<p><img src="/images/media/15181864597804/15184897161417.jpg" alt=""></p>
+<hr>
+<p>守护线程可以理解为前台线程</p>
+<hr>
+<p><img src="/images/media/15181864597804/15185076255334.jpg" alt=""><br><img src="/images/media/15181864597804/15185076520612.jpg" alt=""><br>常见的处理线程方法<br>setPriority()<br>setDaemon()<br>join()<br>toString()</p>
+<h1 id="常用对象API"><a href="#常用对象API" class="headerlink" title="常用对象API"></a>常用对象API</h1><h3 id="Sting"><a href="#Sting" class="headerlink" title="Sting"></a>Sting</h3><p>String  是一个特殊的对象，一旦初始化之后就不可以被改变了，只能改变指向他的指针，它本身是不进行改变的。</p>
+<p>如果直接给变量赋字符串的话，字符串定义在字符串的常量池中，池中没有就进行建立，池中如果有的话就直接用，所以两者之间的地址值是相同的。所以出现了两个指针指向同一个字符串的现象。但是如果用 <strong> new </strong>  创建则是两个对象，不会有这种情况的产生，因为是不同的地址。</p>
+<p>字符串有自己的 equals 方法，他把 object 类的方法进行了覆盖重写，不比较地址值，只要两者的内容相同就认为是相同的。</p>
+<p><img src="/images/media/15181864597804/15185090061846.jpg" alt=""></p>
+<p>获取长度:</p>
+<ol>
+<li>数组是属性</li>
+<li>字符串是方法</li>
+</ol>
+<p>不要忘记了 substring 的第二个参数的坐标值是取不到的，只能取到他的前一个坐标</p>
+<p><img src="/images/media/15181864597804/15186504257367.jpg" alt=""><br>StringBulider 不同步，效率更高<br>StringBuffer 同步<br>在转化为 String 的引用时不要忘记了需要进行类型转换。</p>
+<p><img src="/images/media/15181864597804/15186511505171.jpg" alt=""></p>
+<h3 id="基本数据类型包装类"><a href="#基本数据类型包装类" class="headerlink" title="基本数据类型包装类"></a>基本数据类型包装类</h3><p><img src="/images/media/15181864597804/15186518501802.jpg" alt=""><br>将基本的数据类型变为对象，方便操作<br><img src="/images/media/15181864597804/15186519942472.jpg" alt=""></p>
+<p><img src="/images/media/15181864597804/15186528739254.jpg" alt=""><br>自动装箱拆箱<br>基本数据类型赋给引用数据类型的时候才装箱<br><img src="/images/media/15181864597804/15187893076339.jpg" alt=""></p>
+<p>===  比较的是变量指向的地址空间是否指向同一个地址空间</p>
+<h1 id="集合框架"><a href="#集合框架" class="headerlink" title="集合框架"></a>集合框架</h1><p><img src="/images/media/15181864597804/15235005398607.jpg" alt=""><br><img src="/images/media/15181864597804/15235005511248.jpg" alt=""></p>
+<p><img src="/images/media/15181864597804/15232559073840.jpg" alt=""></p>
+<p><img src="/images/media/15181864597804/15232558064078.jpg" alt=""></p>
+<p><img src="/images/media/15181864597804/15188321458111.jpg" alt=""></p>
+<p><img src="/images/media/15181864597804/15188514263830.jpg" alt=""></p>
+<p><img src="/images/media/15181864597804/15188516244292.jpg" alt=""></p>
+<p><img src="/images/media/15181864597804/15188532990667.jpg" alt=""><br>如果在原来的集合中操作元素，而迭代器在修改集合之前已经生成，而你之后在进行的修改迭代器是不知道的<br>list 叫做列表</p>
+<p>常用子类：<br><img src="/images/media/15181864597804/15188553504126.jpg" alt=""></p>
+<p>只能存同一个类型因为是用 object 所以可以用多态的方式，存储多种类型，在进行 iterator 进行迭代处理的时候，变为了object 的引用类型进行了提升，所以无法使用特有方法，所以需要进行向下转型。<br><img src="/images/media/15181864597804/15188640410893.jpg" alt=""></p>
+<p><img src="/images/media/15181864597804/15188640595066.jpg" alt=""><br> 集合里面装的都是引用而不是对象,和数组是一回事，迭代方法也用的是引用。</p>
+<p>set 叫做集</p>
+<p><img src="/images/media/15181864597804/15189230191280.jpg" alt=""></p>
+<p>如果想实现比较 直接实现 compare 接口，同时定义自己特有的 compare 方法</p>
+<p><img src="/images/media/15181864597804/15189229564978.jpg" alt=""></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">一般这样来写比较器</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ComparatorByName</span> <span class="keyword">implements</span> <span class="title">Comparator</span>&lt;<span class="title">Person</span>&gt; </span>&#123;</div><div class="line"></div><div class="line">	<span class="meta">@Override</span></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compare</span><span class="params">(Person o1, Person o2)</span> </span>&#123;</div><div class="line">		</div><div class="line">		<span class="keyword">int</span> temp = o1.getName().compareTo(o2.getName());</div><div class="line">		<span class="keyword">return</span> temp==<span class="number">0</span>? o1.getAge()-o2.getAge(): temp;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>泛型里面不能有基本数据类型，引用数据类型不确定的时候才用泛型<br>instanceof测试它左边的对象是否是它右边的类的实例</p>
+<blockquote>
+<p>泛型的本质是参数化类型，也就是说所操作的数据类型被指定为一个参数。</p>
+</blockquote>
+<p>取出一般用下限<br>存入一般用上限</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">泛型的通配符：? 未知类型。 </div><div class="line"></div><div class="line">泛型的限定：</div><div class="line">? extends E: 接收E类型或者E的子类型对象。上限</div><div class="line">一般存储对象的时候用。比如 添加元素 addAll.</div><div class="line"></div><div class="line">? super E: 接收E类型或者E的父类型对象。 下限。</div><div class="line">一般取出对象的时候用。比如比较器。</div></pre></td></tr></table></figure>
+<p>数组与集合的区别</p>
+<blockquote>
+<p>一、数组声明了它容纳的元素的类型，而集合不声明。</p>
+<p>二、数组是静态的，一个数组实例具有固定的大小，一旦创建了就无法改变容量了。而集合是可以动态扩展容<br>   量，可以根据需要动态改变大小，集合提供更多的成员方法，能满足更多的需求。</p>
+<p>三、数组不论是效率还是类型检查都是最好的。</p>
+<p>1.数组是大小固定的,一旦创建无法扩容;集合大小不固定,</p>
+<p>2.数组的存放的类型只能是一种,集合存放的类型可以不是一种(不加泛型时添加的类型是Object);</p>
+<p>3.数组是java语言中内置的数据类型,是线性排列的,执行效率或者类型检查(不懂),都是最快的.</p>
+<p>ArrayList就是基于数组创建的容器类.</p>
+</blockquote>
+<hr>
+<p>两种不同的 for each 方法，通常只用于遍历与迭代，不对去除过程中的迭代进行处理。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span>(String s : list)   <span class="comment">//   java 是强类型的需要声明变量的类型才行.</span></div><div class="line">&#123;</div><div class="line">    System.out.println(s);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> x <span class="keyword">in</span> list:</div><div class="line">    print(x)</div></pre></td></tr></table></figure>
+<blockquote>
+<p>   可以使用高级for遍历map集合吗？不能直接用，但是可以将map转成单列的set，就可以用了。</p>
+</blockquote>
+<h3 id="I-O"><a href="#I-O" class="headerlink" title="I/O"></a>I/O</h3><p>getDateTimeInstance（日期格式，时间格式）</p>
+<p>windows 下的删除是从里面往外面进行删除的，如果目录里面有文件则会删除失败</p>
+<p>enumeration 枚举  被  迭代器  iterator</p>
+<p>任何对象在堆内存中创建，都必须依赖那个 class 文件</p>
+<p>在正则表达式中用（）进行分装分组，分组从1开始进行编号，不要忘记\两个反斜线进行转义<br>组零 代表整个表达式</p>
+<p>final 才是不可修改的修饰符，而 static 是独立于对象的变量，可以不通过实例化类来进行访问，直接通过对类进行访问。</p>
+<p>多态的好处：<br>1.可替换性（substitutability）。多态对已存在代码具有可替换性。例如，多态对圆Circle类工作，对其他任何圆形几何体，如圆环，也同样工作。<br>2.可扩充性（extensibility）。多态对代码具有可扩充性。增加新的子类不影响已存在类的多态性、继承性，以及其他特性的运行和操作。实际上新加子类更容易获得多态功能。例如，在实现了圆锥、半圆锥以及半球体的多态基础上，很容易增添球体类的多态性。<br>3.接口性（interface-ability）。多态是超类通过方法签名，向子类提供了一个共同接口，由子类来完善或者覆盖它而实现的.<br>4.灵活性（flexibility）。它在应用中体现了灵活多样的操作，提高了使用效率。<br>5.简化性（simplicity）。多态简化对应用软件的代码编写和修改过程，尤其在处理大量对象的运算和操作时，这个特点尤为突出和重要。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div></pre></td><td class="code"><pre><div class="line">只能调用引用类型所具有的属性与方法,但是引用类型的方法可以被子类覆盖,而不表现出来.如果是引用变量的话则不会被覆盖,而是指向引用类型的变量.</div><div class="line"></div><div class="line">class A</div><div class="line">&#123;</div><div class="line">    int a =4;</div><div class="line">    A(int age,String name)//定义构造函数</div><div class="line">    &#123;</div><div class="line">        this.age = age;</div><div class="line">        this.name = name;</div><div class="line">    &#125;</div><div class="line">    int age;</div><div class="line">    String name;</div><div class="line">    void speak()</div><div class="line">    &#123;</div><div class="line">        System.out.println(name+&quot;......&quot;+age);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line">class B extends A</div><div class="line">&#123;</div><div class="line">    int a = 3 ;</div><div class="line">    int b = 3;</div><div class="line">    B(int age,String name)</div><div class="line">    &#123;</div><div class="line">        super(age,name);//调用构造函数</div><div class="line">    &#125;</div><div class="line">    void speak()</div><div class="line">    &#123;</div><div class="line">        System.out.println(age+&quot;......&quot;+name);</div><div class="line">    &#125;</div><div class="line">    void hehe()</div><div class="line">    &#123;</div><div class="line">        System.out.println(&quot;hhehe&quot;);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line">class fugai &#123;</div><div class="line">    public static void main(String[] args) &#123;</div><div class="line">        A stu1 = new B(3,&quot;mjy&quot;);</div><div class="line">        A stua = new A(3,&quot;mjy&quot;);</div><div class="line">        B stub = new B(3,&quot;mjy&quot;);</div><div class="line"></div><div class="line">        stua.speak();</div><div class="line">        stu1.speak();</div><div class="line"></div><div class="line">        stua.hehe();</div><div class="line">        stu1.hehe();</div><div class="line">        stub.hehe();</div><div class="line">        System.out.println(stu1.b);</div><div class="line">        System.out.println(stua.b);</div><div class="line">        System.out.println(stub.b);</div><div class="line"></div><div class="line">        System.out.println(stu1.a);</div><div class="line">        B stu2 = new B(3,&quot;mjy&quot;);</div><div class="line">        System.out.println(stu2.a);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>java也是有先后的执行顺序的,如果在后面的对象调用前面的对象时可以的,但是如果前面的对象时无法调用后面的对象,这是在同一个 class 中同时有多个类时,产生的情况.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line">class FF</div><div class="line">&#123;</div><div class="line">    int a=1;</div><div class="line">    void speak()</div><div class="line">    &#123;</div><div class="line">        System.out.println(&quot;FF&quot;);</div><div class="line">    &#125;</div><div class="line">    static void method()</div><div class="line">    &#123;</div><div class="line">        System.out.println(&quot;FF static method&quot;);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">class ZZ extends FF</div><div class="line">&#123;</div><div class="line">    int a=2;</div><div class="line">    void speak()</div><div class="line">    &#123;</div><div class="line">        System.out.println(&quot;ZZ&quot;);</div><div class="line">    &#125;</div><div class="line">    static void method()</div><div class="line">    &#123;</div><div class="line">        System.out.println(&quot;ZZ static method&quot;);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">public class Duotai &#123;</div><div class="line">    public static void main(String[] args) &#123;</div><div class="line">        FF a = new ZZ();</div><div class="line">        a.speak();    //如果调用引用类型的非 static 方法,则这个方法会被子类方法覆盖</div><div class="line">        a.method();   //如果调用引用类型的 static 方法,则直接调用引用的类方法,而不会被子类的方法覆盖</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>抽象接口中不能有具体方法但是可以有默认方法与 static 方法(只能被接口类调用),如果没有实现全部的方法,则声明时仍应该是抽象类</p>
+<p>接口的实现必须是 public 的权限修饰符,因为 interface 中的抽象方法的权限比较高,是 public 的需要进行更高的覆盖,也就是必须使用 public 方法.<br>接口中方法是隐式抽象的,接口中的方法会被隐式的指定为 public abstract（只能是 public abstract，其他修饰符都会报错）。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">import java.util.ArrayList;</div><div class="line">import java.util.List;</div><div class="line"></div><div class="line">public class ListDemo &#123;</div><div class="line">    public static void main(String[] args) &#123;</div><div class="line">        a();</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    private static void a() &#123;</div><div class="line">//        List&lt;String&gt; list = new ArrayList();  //提前进行检查类型,不加也可以,只是没有了提前的检查类型.</div><div class="line">        List list = new ArrayList();</div><div class="line">//        ArrayList list = new ArrayList();</div><div class="line">        list.add(&quot;mjy&quot;);</div><div class="line">        list.add(&quot;mjy&quot;);</div><div class="line">        list.add(1);</div><div class="line">        System.out.println(list.size());</div><div class="line">        System.out.println(list);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>接口中可以有初始化变量,但是必须给其赋值.</p>
+<p>构造函数前面可以加权限修饰符,直接可以影响在创建对象时的情况与普通的类 new 对象时一样的,来控制在不同情况在创建对象的权限.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">class zi</div><div class="line">&#123;</div><div class="line">    public zi()</div><div class="line"></div><div class="line">    &#123;</div><div class="line">        System.out.println(&quot;zi zi&quot;);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>java 可是在数值表示中自由的使用_来分割数值,这样可以使轻松的分别位数</p>
+<p>从大的数据类型往小的数据类型转的时候,需要进行强转<br>而从小的数据类型往大的数据类型转的时候可是直接进行转换</p>
+<p>xxx+””, 可以直接转为字符串类型</p>
+<p>默认浮点数类型为 double,转为 float 需要强转,或者是在数值的后面加上 f</p>
+<p>byte 1<br>short 2<br>int 4  float  后面+ f 转为 float<br>long 8  double 后面+ d 转为 double</p>
+<p>短路与非短路 &amp;&amp; &amp;   ||   |  非短路的总后执行到第二个判断.</p>
+<p>数组在初始化之后长度是不可变得但是里面可以进行存取操作也就是里面的内容是可是进行改变的,<br>而 String 在初始化之后内容是不可变的,长度也是不可变的.<br>一旦数组初始化完成,数组在内存中所占的空间将被固定下来,因此数组的长度是不可改变的.</p>
+<p>引用类型数组里每个元素里存储的还是引用,指向另一块内存,这里才存储了有效数据.</p>
+<p>因为 java 的强类型原因,所以在用 int[][] 声明二维数组之后不能再扩大其维数,因为初始化时已经确定第一位是引用类型第二维是 int[] 类型,如果想多维的话就要用 object[][], 这样可以无限引用,就像 js 与 python 一样.</p>
+<p>子类对象可以直接赋给父类变量</p>
+<p>如果继承树里的某一个类需要被初始化时,系统将会同时初始化该类的所有父类</p>
+<p>如果多个构造器中包含了相同的初始化代码,则可以将这些初始化代码放置在初始化块里完成,初始化块总是在构造器之前被调用.</p>
+<p>static 相当于一个标记,说明该成员是属于类还是属于实例.</p>
+<p>构造器不能有定义返回值,也不能使用 void 说明没有返回值.</p>
+<p>new 调用构造器返回该类的实例,这个实例就是构造器的返回值,因此构造器的返回值类型总是当前类,无需定义返回值类型,返回值是隐式的.</p>
+<p>this 关键字总是指向调用该方法的对象.</p>
+<p>调用成员变量,方法时,主调是必不可少的,即使代码中省略了,但是主调实际上依然存在.</p>
+<p>尽量不要使用对象去调用 static 方法,而是用类去调用.因为对象中其实并没有这个成员变量.</p>
+<p>java 中只有一种参数传递的方式就是值传递.实际参数值本身不会受到任何影响.</p>
+<p>个数可变形参的本质就是一个数组类型的形参,可以传入多个参数,也可以传入一个数组.</p>
+<p>java 的包机制需要两方面的保证 :<br>1.源文件里使用 package 语句指定包名<br>2.class 文件必须放在对应的路径下</p>
+<blockquote>
+<p>public static void main(String[] args)  主函数中一定要写参数,否则会报错</p>
+</blockquote>
+<p>如果有所属的包,就要使用 javac -d ,这样没有在指定的路径下找到就会报错.</p>
+<p>在调用构造器之前,系统会先为这个对象分配内存空间,并为这个对象执行默认初始化,只是这个对象还不能通过外部进行访问.</p>
+<p>使用 this 调用另一个重载的构造函数只能在构造器中使用,而且必须作为构造器执行体的<strong>第一条语句</strong>. this 会根据后面的参数调用与之对应的构造器.</p>
+<p>实例变量不具有多态性.只有方法才具有.</p>
+<p>通过反射机制可以调用编译方法时无法调用的但是实际上确实包含的方法.父类引用指向子类对象时,编译时只能调用编译时类型所具有的方法,但是在运行时却执行他运行时类型所具有的方法,这样就是会调用子类的覆盖父类的方法,但是无法调用只有子类中有的方法而父类中没有的方法的原因.</p>
+<p>子类是一种特殊的父类.向上进行转型.</p>
+<p>instanceof 运算符前面的操作数的编译时类型要么与后面的类相同,要么与后面的类具有父子继承关系,否则引起编译错误.</p>
+<p>继承与组合:<br>继承是 is a 关系  比如 动物与狗  一般使用 extends 关键字,直接使子类拥有父类中的方法.<br>组合是 has a 关系 比如 人与武器  一般在构造函数中传入需要组合的对象,这样才能在内部调用其方法.</p>
+<p>java 允许定义两个普通初始化块,但是这样是没有意义的,因为它总是隐式执行,而且他们总是全部执行.</p>
+<p>java 系统加载加载并初始化某个类时,总是保证该类的所有父类全部加载并初始化完成.</p>
+<p>初始化顺序<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">父类的静态初始化块</div><div class="line">子类的静态初始化块</div><div class="line">父类的初始化块</div><div class="line">父类的构造函数</div><div class="line">子类的初始化块</div><div class="line">子类的构造函数</div><div class="line">1. 静态初始化块的优先级最高，也就是最先执行，并且仅在类第一次被加载时执行；</div><div class="line">2. 非静态初始化块和构造函数后执行，并且在每次生成对象时执行一次；</div><div class="line">3. 非静态初始化块的代码会在类构造函数之前执行。因此若要使用，应当养成把初始化块写在构造函数之前的习惯，便于调试；</div><div class="line">4. 静态初始化块既可以用于初始化静态成员变量，也可以执行初始化代码；</div><div class="line">5. 非静态初始化块可以针对多个重载构造函数进行代码复用。</div></pre></td></tr></table></figure></p>
+<p>final修饰的成员变量必须由程序员指定初始值.</p>
+<p>抽象方法没有方法体.也就是没有{}</p>
+<p>static 和 abstract 虽然不能同时修饰每个方法,但是可以同时修饰内部类.</p>
+<p>abstract 不能修饰变量.也不能修饰构造器.不能与 private 同时修饰方法,因为抽象的目的就是等着子类去实现.</p>
+<p>接口只能继承接口.接口中定义的内部类,内部接口,内部枚举默认都采用 public,static 两个修饰符,不管定义时是否指定这两个修饰符,系统都会自动使用对他们进行修饰.</p>
+<p>引用调用是函数传递参数的一种方式，使用引用调用，可以在子函数中对形参所做的更改对主函数中的实参有效。引用可以看成是一种特殊类型的变量可以被认为是另一个变量的别名，就好比人的绰号一样，虽然名字不同，但所指向的人是一样的，所以引用还与指针有类似的地方。</p>
+<p>一个方法可以修改传递引用所对应的变量值，而不能修改传递值调用所对应的变量值，这句话相当重要，这是按值调用与引用调用的根本区别.按值调用相当于传入了一个副本拷贝,不会改变传入的本体,而是会改变传入的副本.</p>
+<p>实现接口中的方法不必须使用 public 访问控制权限修饰符,在接口中的方法都是 public 的,而子类重写父类方法是的访问权限只能更大或者相等,所以实现类实现接口里的方法是只能使用 public 访问权限.</p>
+<p>接口里的成员变量默认是使用 public static final 修饰的.</p>
+<p>非静态内部类不能拥有静态成员.</p>
+<p>非静态内部类普通初始化块的作用与外部类初始化块的作用完全相同.</p>
+<p>外部类的上一级程序单元是包,而已不可以使用 static 修饰,而内部类的上一级程序单元是外部类,可以使用 staic 修饰可以将内部类变成外部类相关,而不是外部类实例相关.</p>
+<p>优先考虑视同静态内部类,直接把外部类当做静态内部类的包空间.</p>
+<p>list 可以直接通过索引来访问, map 集合可以通过每个元素的 value 来访问,而如果访问 set 集合中的元素,则只能根据元素本身来访问(这也是 set 集合里面元素不允许重复的原因)</p>
+<p>在传统模式下,对象丢进集合中后,集合会忘记这个对象的类型,系统会把所有元素当做 object 类型,1.5之<br>有了泛型来限制集合中的元素的类型,让集合记住所有集合元素的类型.</p>
+<p>hashset 集合判断两个元素相等的标准是两个对象通过 equals() 方法判断相等的同时,并且 hashcode() 方法返回的值也相等.</p>
+<p>在调用 list 中的set方法时不会改变 list 的长度,比如 set 索引的地方超过了 list 的范围.</p>
+<p>Java远程方法调用，即Java RMI（Java Remote Method Invocation）是Java编程语言里，一种用于实现远程过程调用的应用程序编程接口。它使客户机上运行的程序可以调用远程服务器上的对象。远程方法调用特性使Java编程人员能够在网络环境中分布操作。RMI全部的宗旨就是尽可能简化远程接口对象的使用。</p>
+<p>所有的包装类（Integer、Long、Byte、Double、Float、Short）都是抽象类 Number 的子类。</p>
+<p>序列化:Java 提供了一种对象序列化的机制，该机制中，一个对象可以被表示为一个字节序列，该字节序列包括该对象的数据、有关对象的类型的信息和存储在对象中数据的类型。</p>
+<p>反序列化:将序列化对象写入文件之后，可以从文件中读取出来，并且对它进行反序列化，也就是说，对象的类型信息、对象的数据，还有对象中的数据类型可以用来在内存中新建对象。</p>
+<p>静态方法的参数不能引用泛型:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">方法的参数中引用泛型。这与线程安全有关。</div><div class="line"></div><div class="line">　　静态方法在 JVM 的 ClassLoder 阶段被写到内存的方法区，有且只有一份，在多线程之间对象共享，包括静态方法的类型参数在方法区中只有一份，也是对象共享。如果使用了泛型，当多个对象调用静态方法先后注入String、Integer类型参数，那么该静态方法的类型参数最后保存的是Integer类型，此时，先前调用静态方法的对象将会因为类型不匹配，而爆发运行时异常。当然，为了杜绝这种错误，一开始就会提示不能在静态方法中使用泛型。</div><div class="line"></div><div class="line">　　我见过有将类型参数声明为 Object 的情况，Obejct 通用对象，但我总觉得不安全。我常用的做法是声明为固定的类型，如String、Integer，根据参数类型的不同，多写几个静态方法。</div></pre></td></tr></table></figure></p>
+<p>版本控制:svn , cvs , git<br>Java构建工具：Ant , Maven , Gradle</p>
+<p>Java语言支持的变量类型有：<br>类变量：独立于方法之外的变量，用 static 修饰。<br>实例变量：独立于方法之外的变量，不过没有 static 修饰。<br>局部变量：类的方法中的变量。<br>引用类型的变量(俗称实例)</p>
+<p>类 Class<t><br>T - 由此 Class 对象建模的类的类型。例如，String.class 的类型是 Class<string>。如果将被建模的类未知，则使用 Class&lt;?&gt;。</string></t></p>
+<p>如果 Foo 是 Bar 的一个子类型(子类或者子接口),而 G 是具有泛型声明的类或者接口,而G 是具有泛型接口的类或者对象, G<foo>并不是 G<bar>的子类型</bar></foo></p>
+<p>数组与泛型有所不同,假设 Foo 是 Bar 的一个子类,那么 Foo[]依然是 Bar[] 的子类型,但 G<foo>不是 G<bar>的子类型.</bar></foo></p>
+<p>以前常量池是在方法区,现在JDK1.7已经把常量池转移到堆里面了</p>
+<p>…  代表参数可变</p>
+<p>在软件工程有一个原则:不要把相同的代码书写两次以上,避免相同的代码重复出现,充分利用每一段代码,既可以让程序更加简洁还可以降低软件的维护成本.</p>
+<p>实际上，创建线程最重要的是提供线程函数（回调函数），该函数作为新创建线程的入口函数，实现自己想要的功能</p>
+<p>进程在切换时，一个进程存储在处理器各寄存器中的中间数据叫做进程的上下文，所以进程的切换实质上就是被中止运行进程与待运行进程上下文的切换。在进程未占用处理器时，进程的上下文是存储在进程的私有堆栈中的。<br>而线程是在进程之内进行争抢 cpu 的过程,而进程是系统分配资源的最小单元,进程之间也会争抢 cpu. 但是是由进程的调度有自己的策略,比如高优先级优先等.</p>
+<h3 id="关于IO资源的处理问题，提出三种方案。"><a href="#关于IO资源的处理问题，提出三种方案。" class="headerlink" title="关于IO资源的处理问题，提出三种方案。"></a>关于IO资源的处理问题，提出三种方案。</h3><ol>
+<li><p>close()放在try块中</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">try &#123;</div><div class="line">    PrintWriter out = new PrintWriter(</div><div class="line">            new BufferedWriter(</div><div class="line">            new FileWriter(&quot;out.txt&quot;, true)));</div><div class="line">    out.println(&quot;the text&quot;);</div><div class="line">    out.close();</div><div class="line">&#125; catch (IOException e) &#123;</div><div class="line">    e.printStackTrace();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>close()放在finally块中</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">try &#123;</div><div class="line"></div><div class="line">	fw = new FileWriter(&quot;k:\\demo.txt&quot;);</div><div class="line"></div><div class="line">	fw.write(&quot;abcde&quot; + LINE_SEPARATOR + &quot;hahaha&quot;);</div><div class="line"></div><div class="line">&#125; catch (IOException e) &#123;</div><div class="line">	System.out.println(e.toString());</div><div class="line">&#125; finally &#123;</div><div class="line">	if (fw != null)</div><div class="line">		try &#123;</div><div class="line">			fw.close();</div><div class="line">		&#125; catch (IOException e) &#123;</div><div class="line">			// code....</div><div class="line">			throw new RuntimeException(&quot;关闭失败&quot;);</div><div class="line">		&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>使用try-with-resource语句</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">try (PrintWriter out2 = new PrintWriter(</div><div class="line">            new BufferedWriter(new FileWriter(&quot;out.txt&quot;, true)))</div><div class="line">    ) </div><div class="line">    &#123;</div><div class="line">    out2.println(&quot;the text&quot;);</div><div class="line">    &#125; </div><div class="line">catch (IOException e) </div><div class="line">&#123;</div><div class="line">    e.printStackTrace();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>装饰比继承灵活。<br>特点：装饰类和被装饰类都必须所属同一个接口或者父类。 </p>
+<p>Unicode 是「字符集」<br>UTF-8 是「编码规则」<br>UTF-8是一种8位的unicode字符集，编码长度是可变的，并且是ASCII字符集的严格超集，也就是说ASCII中每个字符的编码在UTF-8中是完全一样的。UTF-8字符集中，一个字符可能是1个字节，2个字节，3个字节或者4个字节长。一般来说，欧洲的字母字符长度为1到2个字节，而亚洲的大部分字符则是3个字节，附加字符为4个字节长。</p>
+<p>Java 设计时 Unicode 的码点上限还是 0xFFFF，即使现在，非 BMP 文字也比较罕见，设计成两字节是比使用 UTF-8 之类「过于变长」的编码更方便的。1990 年代出的、和 Unicode 有关的库啊，语言啊，API 啊基本上都是这样设定。</p>
+<p>另一个流行的可变长度编码方案是UTF-16，它使用2个或者4个字节来存储字符。</p>
+<p>编码：字符串变成字节数组；String –&gt;byte[];  （String类的方法）：str.getBytes(charsetName);；将该字符串按照指定编码表编码。<br>解码：字节数组变成字符串；byte[] –&gt;String;  （String类的构造方法）：new String(byte[],charsetName);通过使用指定的charset解码指定的 byte 数组。</p>
+<h1 id="异常处理"><a href="#异常处理" class="headerlink" title="异常处理"></a>异常处理</h1><p>1.主要依赖于 try,catch,finally,thow,throws 五个关键字<br>2.捕获多种类型的异常时,异常变量使用隐式的 final 修饰,不能进行重新赋值,而捕获一种类型异常时,没有 final 修饰,可以进行重新赋值.</p>
+<p>java 垃圾回收机制不会回收任何物理资源,垃圾处理机制只能回收堆内存中对象所占用的内存.</p>
+<blockquote>
+<p>Java GC（Garbage Collection，垃圾收集，垃圾回收）机制</p>
+</blockquote>
+<p>2.3方法区 (Method Area)<br>方法区在JVM中也是一个非常重要的区域，它与堆一样，是被线程共享的区域。在方法区中，存储了每个类的信息（包括类的名称、方法信息、字段信息）、静态变量、常量以及编译器编译后的代码等。</p>
+<p>在Class文件中除了类的字段、方法、接口等描述信息外，还有一项信息是常量池，用来存储编译期间生成的字面量和符号引用。</p>
+<p>在方法区中有一个非常重要的部分就是运行时常量池，它是每一个类或接口的常量池的运行时表示形式，在类和接口被加载到JVM后，对应的运行时常量池就被创建出来。当然并非Class文件常量池中的内容才能进入运行时常量池，在运行期间也可将新的常量放入运行时常量池中，比如String的intern方法。</p>
+<p>方法区（Method Area）</p>
+<p>（1）方法区域是全局共享的，比如每个线程都可以访问同一个类的静态变量。在方法区中，存储了已被JVM加载的类的信息、静态变量、编译器编译后的代码等。如，当程序中通过getName、isInterface等方法来获取信息时，这些数据来源于方法区。</p>
+<p>（2）由于使用反射机制的原因，虚拟机很难推测哪个类信息不再使用，因此这块区域的回收很难！另外，对这块区域主要是针对常量池回收，值得注意的是JDK1.7已经把常量池转移到堆里面了。</p>
+<p>（3）同样，当方法区无法满足内存分配需求时，会抛出OutOfMemoryError。</p>
+<p>栈空间（stack），连续的存储空间，遵循后进先出的原则，用于存放局部变量。<br>堆空间（heap），不连续的空间，用于存放new出的对象，或者说是类的实例。<br>方法区（method），方法区在堆空间内，用于存放①类的代码信息；②静态变量和方法；③常量池（字符串敞亮等，具有共享机制）以前常量池是在方法区,现在JDK1.7已经把常量池转移到堆里面了。</p>
+<p>　　在前面的文章中，我们使用线程的时候就去创建一个线程，这样实现起来非常简便，但是就会有一个问题：<br>　　如果并发的线程数量很多，并且每个线程都是执行一个时间很短的任务就结束了，这样频繁创建线程就会大大降低系统的效率，因为频繁创建线程和销毁线程需要时间。<br>　　那么有没有一种办法使得线程可以复用，就是执行完一个任务，并不被销毁，而是可以继续执行其他的任务？<br>　　在Java中可以通过线程池来达到这样的效果</p>
+<p>函数式接口(Functional Interface)是Java 8对一类特殊类型的接口的称呼。 这类接口只定义了唯一的抽象方法的接口（除了隐含的Object对象的公共方法）， 因此最开始也就做SAM类型的接口（Single Abstract Method）。</p>
+<p>处理流:只要流的构造参数不是一个物理节点,而是已经存在的流<br>节点流:直接以物理 IO 节点作为构造参数的.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">一、如何得到Class的对象呢？有三种方法可以的获取：</div><div class="line"></div><div class="line">  1、调用Object类的getClass()方法来得到Class对象，这也是最常见的产生Class对象的方法。例如：</div><div class="line">    MyObject x;</div><div class="line">    Class c1 = x.getClass();</div><div class="line"></div><div class="line"> 2、使用Class类的中静态forName()方法获得与字符串对应的Class对象。例如： </div><div class="line">    Class c2=Class.forName(&quot;MyObject&quot;),Employee必须是接口或者类的名字。</div><div class="line"></div><div class="line">3、获取Class类型对象的第三个方法非常简单。如果T是一个Java类型，那么T.class就代表了匹配的类对象。例如</div><div class="line">    Class cl1 = Manager.class;</div><div class="line">    Class cl2 = int.class;</div><div class="line">    Class cl3 = Double[].class;</div><div class="line">    注意：Class对象实际上描述的只是类型，而这类型未必是类或者接口。例如上面的int.class是一个Class类型的对象。由于历史原因，数组类型的getName方法会返回奇怪的名字。</div></pre></td></tr></table></figure>
+<p><img src="/images/media/15181864597804/15222212599160.jpg" alt=""></p>
+<blockquote>
+<p>BufferedReader默认的缓冲大小是8k</p>
+</blockquote>
+<p><img src="/images/media/15181864597804/15223101592460.jpg" alt=""></p>
+<p>位运算符<br><img src="/images/media/15181864597804/15223101903087.jpg" alt=""></p>
+<p>DateFormat其本身是一个抽象类,SimpleDateFormat 类是DateFormat类的子类,一般情况下来讲DateFormat类很少会直接使用,而都使用SimpleDateFormat类完成</p>
+<p>在 Java 中定义的函数或方法不可能完全独立，也不能将方法作为参数或返回一个方法给实例。</p>
+<p>Java 中的 Lambda 表达式通常使用 (argument) -&gt; (body) 语法书写</p>
+<p>Lambda表达式<br>1.表达式的目标类型必须是明确的函数式接口.<br>2.表达式只能为函数式接口创建对象. Lambda 表达式只能实现一个方法,因此只能为只有一个抽象方法的接口(函数式接口)创建对象.</p>
+<p>Properties  此类是线程安全的：多个线程可以共享单个 Properties 对象而无需进行外部同步。</p>
+<p><img src="/images/media/15181864597804/15244680579538.jpg" alt=""><br>查看代码的 执行时间</p>
+<p>java文件夹被标注为Sources，那么下面的所有子文件夹均为Sources，编译后生成.class文件。<br>Resources文件夹被标注为Resources，那么在该文件夹下的配置文件在编译时会自动复制到编译文件夹中。</p>
+<p>CLASSPATH是用来指定.class路径的，不是用来指定.java文件的路径的</p>
+<p>replace 与 replaceall 区别<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">replace的参数是char和CharSequence，即可以支持字符的替换，也支持字符串的替换（CharSequence即字符串序列的意思,说白了也就是字符串）；</div><div class="line"></div><div class="line">replaceAll的参数是regex，即基于规则表达式的替换，比如：可以通过replaceAll(&quot;\\d&quot;, &quot;*&quot;)把一个字符串所有的数字字符都换成星号；</div><div class="line"></div><div class="line">相同点：都是全部替换，即把源字符串中的某一字符或字符串全部换成指定的字符或字符串；</div><div class="line"></div><div class="line">不同点：replaceAll支持正则表达式，因此会对参数进行解析（两个参数均是），如replaceAll(&quot;\\d&quot;, &quot;*&quot;)，而replace则不会，replace(&quot;\\d&quot;,&quot;*&quot;)就是替换&quot;\\d&quot;的字符串，而不会解析为正则。</div></pre></td></tr></table></figure></p>
+<h3 id="泛型"><a href="#泛型" class="headerlink" title="泛型"></a>泛型</h3><ol>
+<li><p>所有泛型方法声明都有一个类型参数声明部分（由尖括号分隔），该类型参数声明部分在方法返回类型之前（在下面例子中的<e>）。</e></p>
+</li>
+<li><p>1 这种带通配符的list仅仅表示它是各种泛型List的父类，但是并不能将元素添加在其中，除了null之外。其实这点也很好理解的，因为程序不能确定集合里面的元素的类型是什么，当然不能想其中添加对象。<br>2 程序可以调用get()方法来获得指定索引处的元素，但是其返回值是一个未知类型，其实也就是Object类型。</p>
+</li>
+<li><p>java泛型的设计原则就是只要代码在编译时没有出现警告，就不会遇到运行时ClassCastException异常。对比：如果A是B的一个子类型，包括子类或者子接口，那么A[]依然是B[]的子类型，但是G<a>不是G<b>的子类型。</b></a></p>
+</li>
+</ol>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/08/05/01背包问题/" rel="next" title="背包问题">
+                <i class="fa fa-chevron-left"></i> 背包问题
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="MY" />
+          <p class="site-author-name" itemprop="name">MY</p>
+           
+              <p class="site-description motion-element" itemprop="description">Nice to meet you</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">分类</span>
+              
+            </div>
+          
+
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Java-学习"><span class="nav-number">1.</span> <span class="nav-text">Java 学习</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#面向对象思想与基本原理"><span class="nav-number">1.1.</span> <span class="nav-text">面向对象思想与基本原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#上面的进制表示不区分大小写"><span class="nav-number">1.2.</span> <span class="nav-text">上面的进制表示不区分大小写</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#异常"><span class="nav-number">1.2.1.</span> <span class="nav-text">异常</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#常用对象API"><span class="nav-number">2.</span> <span class="nav-text">常用对象API</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Sting"><span class="nav-number">2.0.1.</span> <span class="nav-text">Sting</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基本数据类型包装类"><span class="nav-number">2.0.2.</span> <span class="nav-text">基本数据类型包装类</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#集合框架"><span class="nav-number">3.</span> <span class="nav-text">集合框架</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#I-O"><span class="nav-number">3.0.1.</span> <span class="nav-text">I/O</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#关于IO资源的处理问题，提出三种方案。"><span class="nav-number">3.0.2.</span> <span class="nav-text">关于IO资源的处理问题，提出三种方案。</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#异常处理"><span class="nav-number">4.</span> <span class="nav-text">异常处理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#泛型"><span class="nav-number">4.0.1.</span> <span class="nav-text">泛型</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">MY</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
