@@ -94,17 +94,17 @@
 
 
 
-<meta name="description" content="iptables 学习笔记iptables 中存在链与表，其中链所指的就是处理的位置与规则，而表则是指明所需要操作的目的，表有四种：filter（过滤），nat（地址转换），raw，mangle表表示处理数据的的目的，在一个表中有许多不同的规则，根据数据不同也就对应不同的处理方式。链有五种：prerouting，input，forward，output，postrouting。链表示处理数据是的位">
+<meta name="description" content="1 http://acm.hdu.edu.cn/showproblem.php?pid=117112345678910111213141516171819202122232425262728293031323334//HDU 1171  #include&amp;lt;iostream&amp;gt;  #include&amp;lt;cstdio&amp;gt;  #include&amp;lt;cstring&amp;gt;  #inclu">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello">
-<meta property="og:url" content="http://blog.majpyi.club/2018/04/11/iptables 学习笔记/index.html">
+<meta property="og:title" content="多重背包问题">
+<meta property="og:url" content="http://blog.majpyi.club/2017/08/05/多重背包问题/index.html">
 <meta property="og:site_name" content="Hello">
-<meta property="og:description" content="iptables 学习笔记iptables 中存在链与表，其中链所指的就是处理的位置与规则，而表则是指明所需要操作的目的，表有四种：filter（过滤），nat（地址转换），raw，mangle表表示处理数据的的目的，在一个表中有许多不同的规则，根据数据不同也就对应不同的处理方式。链有五种：prerouting，input，forward，output，postrouting。链表示处理数据是的位">
+<meta property="og:description" content="1 http://acm.hdu.edu.cn/showproblem.php?pid=117112345678910111213141516171819202122232425262728293031323334//HDU 1171  #include&amp;lt;iostream&amp;gt;  #include&amp;lt;cstdio&amp;gt;  #include&amp;lt;cstring&amp;gt;  #inclu">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-11T02:32:16.000Z">
+<meta property="og:updated_time" content="2019-03-30T03:18:04.288Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello">
-<meta name="twitter:description" content="iptables 学习笔记iptables 中存在链与表，其中链所指的就是处理的位置与规则，而表则是指明所需要操作的目的，表有四种：filter（过滤），nat（地址转换），raw，mangle表表示处理数据的的目的，在一个表中有许多不同的规则，根据数据不同也就对应不同的处理方式。链有五种：prerouting，input，forward，output，postrouting。链表示处理数据是的位">
+<meta name="twitter:title" content="多重背包问题">
+<meta name="twitter:description" content="1 http://acm.hdu.edu.cn/showproblem.php?pid=117112345678910111213141516171819202122232425262728293031323334//HDU 1171  #include&amp;lt;iostream&amp;gt;  #include&amp;lt;cstdio&amp;gt;  #include&amp;lt;cstring&amp;gt;  #inclu">
 
 
 
@@ -133,13 +133,13 @@
 
 
 
-  <link rel="canonical" href="http://blog.majpyi.club/2018/04/11/iptables 学习笔记/"/>
+  <link rel="canonical" href="http://blog.majpyi.club/2017/08/05/多重背包问题/"/>
 
 
 
 
 
-  <title> | Hello</title>
+  <title>多重背包问题 | Hello</title>
   
 
 
@@ -272,7 +272,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://blog.majpyi.club/2018/04/11/iptables 学习笔记/">
+    <link itemprop="mainEntityOfPage" href="http://blog.majpyi.club/2017/08/05/多重背包问题/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="MY">
@@ -289,7 +289,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline"></h1>
+          <h1 class="post-title" itemprop="name headline">多重背包问题</h1>
         
 
         <div class="post-meta">
@@ -301,8 +301,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-11T10:32:16+08:00">
-                2018-04-11
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-05T22:50:18+08:00">
+                2017-08-05
               </time>
             
 
@@ -311,6 +311,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/算法/" itemprop="url" rel="index">
+                    <span itemprop="name">算法</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -339,8 +361,7 @@
       
 
       
-        <h1 id="iptables-学习笔记"><a href="#iptables-学习笔记" class="headerlink" title="iptables 学习笔记"></a>iptables 学习笔记</h1><p>iptables 中存在链与表，其中链所指的就是处理的位置与规则，而表则是指明所需要操作的目的，<br>表有四种：filter（过滤），nat（地址转换），raw，mangle<br>表表示处理数据的的<strong>目的</strong>，在一个表中有许多不同的规则，根据数据不同也就对应不同的处理方式。<br>链有五种：prerouting，input，forward，output，postrouting。<br>链表示处理数据是的<strong>位置</strong>，在一个链中有许多不同的规则，但是执行的能力与权限不同。因为不同位置处理数据的能力是不同的。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">4个表:filter,nat,mangle,raw，默认表是filter（没有指定表的时候就是filter表）。表的处理优先级：raw&gt;mangle&gt;nat&gt;filter。</div><div class="line"></div><div class="line">     filter：一般的过滤功能</div><div class="line"></div><div class="line">     nat:用于nat功能（端口映射，地址映射等）</div><div class="line"></div><div class="line">      mangle:用于对特定数据包的修改</div><div class="line"></div><div class="line">      raw:有限级最高，设置raw时一般是为了不再让iptables做数据包的链接跟踪处理，提高性能</div><div class="line"> 5个链：PREROUTING,INPUT,FORWARD,OUTPUT,POSTROUTING。</div><div class="line"></div><div class="line">      PREROUTING:数据包进入路由表之前</div><div class="line"></div><div class="line">      INPUT:通过路由表后目的地为本机</div><div class="line"></div><div class="line">      FORWARDING:通过路由表后，目的地不为本机</div><div class="line"></div><div class="line">      OUTPUT:由本机产生，向外转发</div><div class="line"></div><div class="line">      POSTROUTIONG:发送到网卡接口之前。</div></pre></td></tr></table></figure>
+        <h3 id="1-http-acm-hdu-edu-cn-showproblem-php-pid-1171"><a href="#1-http-acm-hdu-edu-cn-showproblem-php-pid-1171" class="headerlink" title="1 http://acm.hdu.edu.cn/showproblem.php?pid=1171"></a>1 <a href="http://acm.hdu.edu.cn/showproblem.php?pid=1171" target="_blank" rel="external">http://acm.hdu.edu.cn/showproblem.php?pid=1171</a></h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//HDU 1171  </span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;  </span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;  </span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;  </span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;  </span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;  </div><div class="line">  </div><div class="line"><span class="keyword">int</span> dp[<span class="number">250005</span>];  </div><div class="line"><span class="keyword">int</span> v[<span class="number">5005</span>];  </div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span>  </span></div><div class="line"><span class="function"></span>&#123;  </div><div class="line">    <span class="keyword">int</span> n,vv,t;  </div><div class="line">    <span class="keyword">while</span>((~<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n)&amp;&amp;n&gt;<span class="number">0</span>))  </div><div class="line">    &#123;  </div><div class="line">        <span class="built_in">memset</span>(dp,<span class="number">0</span>,<span class="keyword">sizeof</span>(dp));  </div><div class="line">        <span class="built_in">memset</span>(v,<span class="number">0</span>,<span class="keyword">sizeof</span>(v));  </div><div class="line">        <span class="keyword">int</span> sum = <span class="number">0</span>,num = <span class="number">0</span>;  </div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>;i &lt;= n;i++)  </div><div class="line">        &#123;  </div><div class="line">            <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;vv,&amp;t);  </div><div class="line">            sum += vv*t;  </div><div class="line">            v[num++] = vv*t;  </div><div class="line">        &#125;  </div><div class="line">  </div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; num;i++)  </div><div class="line">        &#123;  </div><div class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = sum/<span class="number">2</span>;j &gt;= v[i];j--)  </div><div class="line">            &#123;  </div><div class="line">                dp[j] = max(dp[j],dp[j-v[i]]+v[i]);  </div><div class="line">            &#125;  </div><div class="line">        &#125;  </div><div class="line">        <span class="built_in">cout</span>&lt;&lt;sum-dp[sum/<span class="number">2</span>]&lt;&lt;<span class="string">" "</span>&lt;&lt;dp[sum/<span class="number">2</span>]&lt;&lt;<span class="built_in">endl</span>;  </div><div class="line">    &#125;  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -365,8 +386,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/04/02/VPS 问题处理/" rel="next" title="VPS">
-                <i class="fa fa-chevron-left"></i> VPS
+              <a href="/2017/08/05/完全背包问题/" rel="next" title="完全背包问题">
+                <i class="fa fa-chevron-left"></i> 完全背包问题
               </a>
             
           </div>
@@ -375,8 +396,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/05/05/母函数/" rel="prev" title="">
-                 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/09/05/递归与回溯/" rel="prev" title="递归回溯">
+                递归回溯 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -502,7 +523,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#iptables-学习笔记"><span class="nav-number">1.</span> <span class="nav-text">iptables 学习笔记</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-http-acm-hdu-edu-cn-showproblem-php-pid-1171"><span class="nav-number">1.</span> <span class="nav-text">1 http://acm.hdu.edu.cn/showproblem.php?pid=1171</span></a></li></ol></div>
             
 
           </div>
