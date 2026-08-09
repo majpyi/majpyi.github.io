@@ -22,5 +22,4 @@ Settings → Pages 中把 Source 设为 `main` 分支根目录即可，
 
 ## 待替换内容
 
-- `your-email@example.com` → 真实邮箱
 - 作品集 / 博客中的占位项目和文章
